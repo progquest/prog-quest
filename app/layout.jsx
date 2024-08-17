@@ -1,6 +1,4 @@
 import "@/styles/globals.css";
-import { Sidebar, SidebarItem } from "@/components/Sidebar";
-import { FaFileCode, FaTrophy } from "react-icons/fa6";
 
 /**
  * Objeto da metadata do site
@@ -14,7 +12,7 @@ export const metadata = {
 	title: "ProgQuest",
 	description: "Aprenda a Programar",
 	manifest: "/manifest.json",
-	icons: { apple: "/icon.png" },
+	icons: { apple: "/icon-192x192.png" },
 	application: {
 		name: "Help Chameleon",
 		short_name: "Hameleon",
@@ -26,7 +24,7 @@ export const metadata = {
 		mobileWebAppCapable: "yes",
 		appleTouchIcon: {
 			image: {
-				src: "/icon.png",
+				src: "/icon-192x192.png",
 				sizes: "192x192",
 				type: "image/png",
 			},
@@ -52,21 +50,7 @@ const RootLayout = ({ children }) => {
 				{/* Elemento pricipal
 				 Manterá as páginas dentro desse elemento */}
 
-				<main className='app flex flex-row'>
-					<Sidebar>
-						<SidebarItem
-							icon={<FaFileCode size={20} />}
-							text={"Exercícios"}
-							alert
-						/>
-						<SidebarItem
-							icon={<FaTrophy size={20} />}
-							text={"Desafios"}
-							alert
-						/>
-					</Sidebar>
-					{children}
-				</main>
+				<main className='app'>{children}</main>
 			</body>
 		</html>
 	);
