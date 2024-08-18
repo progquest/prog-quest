@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
 import { FaGithub, FaGoogle, FaLock, FaUser } from "react-icons/fa";
 
 /**
@@ -10,18 +10,20 @@ import { FaGithub, FaGoogle, FaLock, FaUser } from "react-icons/fa";
  * e botões para logar com Google ou Github
  *
  * TODO: Fazer a autenticação funcional
- * @returns {React.JSX.Element}
+ * @returns {JSX.Element}
  */
 const LoginForm = () => {
 	return (
 		<div className='w-1/3 bg-bbox-rect text-black p-12 rounded-xl border-2 border-bbox-border'>
+			{/* Chameleon Icon */}
 			<Image
 				src={"/assets/icons/login-page-icon/hide-chameleon.svg"}
 				width={230}
 				height={150}
-				className='absolute left-[calc(50%-115px)] top-[90px]'
+				className='absolute left-[calc(50%-115px)] top-[78px]'
 			/>
 
+			{/* Login Form */}
 			<form action=''>
 				<h1 className='text-4xl text-center'>Login</h1>
 
@@ -29,8 +31,7 @@ const LoginForm = () => {
 				<div className='relative w-full h-1/2 my-[30px] mx-0'>
 					<input
 						className='w-full h-full bg-bgray rounded-full
-                    placeholder-shown:text-gray-500 text-gray-500 p-5
-                    vaild:border-green-500 invalid:border-red-500'
+						text-gray-500 p-5'
 						type='text'
 						placeholder='Usuário'
 						required
@@ -42,8 +43,7 @@ const LoginForm = () => {
 				<div className='relative w-full h-1/2 my-[30px] mx-0'>
 					<input
 						className='w-full h-full bg-bgray rounded-full
-                    placeholder-shown:text-gray-500 text-gray-500 p-5
-                    vaild:border-green-500 invalid:border-red-500'
+						text-gray-500 p-5'
 						type='password'
 						placeholder='Senha'
 						required
@@ -55,52 +55,53 @@ const LoginForm = () => {
 				<div className='flex flex-col'>
 					<Link
 						href={"#"}
-						className='text-[#525252] text-right flex-grow mb-2'
+						className='text-gray-500 text-right flex-grow mb-2
+						hover:underline decoration-bpurple'
 					>
 						Esqueceu a senha?
 					</Link>
 				</div>
 
 				{/* Botões */}
-				<div className='flex flex-col justify-center'>
+				<div className='grid grid-cols-2 gap-2.5'>
 					{/* Entrar */}
 					<button
 						type='submit'
-						className='
-                        justify-center items-center
+						className='col-span-2
+                        flex flex-row justify-center items-center
                         p-2.5 bg-bpurple shadow-def-button 
-                        rounded-full flex-grow m-2.5 text-white text-2xl font-semibold'
+                        rounded-full m-2.5 text-white text-2xl font-semibold
+						hover:underline'
 					>
 						Entrar
 					</button>
-					<hr className='bg-black mt-2.5' />
 
-					{/* OAuth */}
-					<div className='flex flex-row w-full justify-between'>
-						{/* Google Login */}
-						<button
-							className='
+					{/* Divisor */}
+					<hr className='border border-gray-500 col-span-2 mt-2.5 rounded-full' />
+
+					{/* Google Login */}
+					<button
+						className='
                         flex flex-row justify-center items-center
                         p-2.5 gap-2.5 bg-bpurple shadow-def-button 
                         rounded-full flex-grow m-2.5 text-white text-2xl 
-                        font-semibold mouse-pointer'
-						>
-							<FaGoogle />
-							Google
-						</button>
+                        font-semibold mouse-pointer hover:underline'
+					>
+						<FaGoogle />
+						Google
+					</button>
 
-						{/* Github Login */}
-						<button
-							className='
+					{/* Github Login */}
+					<button
+						className='
                         flex flex-row justify-center items-center
                         p-2.5 gap-2.5 bg-bpurple shadow-def-button 
                         rounded-full flex-grow m-2.5 text-white text-2xl 
-                        font-semibold mouse-pointer'
-						>
-							<FaGithub />
-							Github
-						</button>
-					</div>
+                        font-semibold mouse-pointer hover:underline'
+					>
+						<FaGithub />
+						Github
+					</button>
 				</div>
 			</form>
 		</div>

@@ -23,7 +23,7 @@ const Login = () => {
                         flex flex-row justify-center items-center
                         bg-bpurple shadow-def-button 
                         rounded-full m-2.5 text-white text-2xl 
-                        font-semibold px-8 py-2.5'
+                        font-semibold px-8 py-2.5 hover:underline'
 			>
 				Registrar
 			</button>
