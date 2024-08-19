@@ -7,36 +7,24 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic":
-					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-			},
 			boxShadow: {
 				"def-button": "0px 10px 0px #452D66",
-			},
-			backgroundColor: {
-				bpurple: "#8B52FE",
-				bgray: "#D9D9D9",
-				"bbox-rect": "#F6EBFB",
-				"bbox-border": "#919191",
-			},
-			textColor: {
-				bpurple: "#8B52FE",
-				bgray: "#D9D9D9",
+				"def-button-pressed": "0px 6px 0px #452D66",
 			},
 			colors: {
-				bpurple: "#8B52FE",
+				"button-purple": "#8B52FE",
 				"shadow-purple": "#452D66",
-				bgray: "#D9D9D9",
-				"bbox-rect": "#F6EBFB",
-				"bbox-border": "#919191",
+				"background-gray": "#e1e1e1",
+				"background-box-rect": "#F6EBFB",
+				"background-box-border": "#919191",
+				"input-box": "#DBC9F3",
 			},
-			width: {
-				"screen-1/2": "50vw",
-			},
-			height: {
-				"screen-1/2": "50vh",
+			screens: {
+				sm: "640px",
+				md: "768px",
+				lg: "1024px",
+				xl: "1280px",
+				"2xl": "1536px",
 			},
 		},
 	},
