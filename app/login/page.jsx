@@ -2,6 +2,16 @@ import LoginForm from "@/components/login-form/LoginForm";
 import Image from "next/image";
 import React from "react";
 
+/**
+ * Página de Login
+ *
+ * Essa página renderiza:
+ *  - O logotipo da ProgQuest
+ *  - Um botão de cadastro
+ *  - O formulário de login, com campos para o usuário e senha
+ *
+ * @returns {JSX.Element} Elemento JSX da página de login
+ */
 const Login = () => {
 	return (
 		<div className='flex w-screen h-screen text-gray-900 bg-background-gray'>
