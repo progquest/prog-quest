@@ -1,21 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-	--gray-50: display-p3 0.941 0.949 0.957;
-	--gray-100: display-p3 0.871 0.886 0.91;
-	--gray-200: display-p3 0.757 0.784 0.824;
-	--gray-300: display-p3 0.627 0.671 0.733;
-	--gray-400: display-p3 0.51 0.569 0.647;
-	--gray-500: display-p3 0.392 0.455 0.545;
-	--gray-600: display-p3 0.318 0.369 0.443;
-	--gray-700: display-p3 0.235 0.271 0.325;
-	--gray-800: display-p3 0.161 0.184 0.22;
-	--gray-900: display-p3 0.075 0.086 0.106;
-	--gray-950: display-p3 0.043 0.047 0.059;
+	--text-900: rgb(17, 24, 39);
+	--background-200: rgb(145, 145, 145);
+	--background-100: rgb(225, 225, 225);
+	--purple-100: rgb(139, 82, 254);
+	--purple-200: rgb(69, 45, 102);
+	--pink-100: rgb(246, 235, 251);
+	--pink-200: rgb(219, 201, 243);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-900: rgb(17, 24, 39);
+		--background-200: rgb(145, 145, 145);
+		--background-100: rgb(225, 225, 225);
+		--purple-100: rgb(139, 82, 254);
+		--purple-200: rgb(69, 45, 102);
+		--pink-100: rgb(246, 235, 251);
+		--pink-200: rgb(219, 201, 243);
+	}
 }
 
 * {
@@ -31,7 +39,7 @@ body {
 
 html {
 	scroll-behavior: smooth;
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {

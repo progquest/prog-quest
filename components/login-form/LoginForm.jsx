@@ -1,7 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { FaGithub, FaGoogle, FaLock, FaUser } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaLock, FaUser } from 'react-icons/fa';
+import { DefaultButton } from '../buttons/DefaultButton';
 
 /**
  * Um quadro com forms de login para credenciais e OAuth
@@ -17,7 +18,7 @@ const LoginForm = () => {
 		<>
 			{/* Chameleon Icon */}
 			<Image
-				src={"/assets/icons/login-page-icon/hide-chameleon.svg"}
+				src={'/assets/icons/login-page-icon/hide-chameleon.svg'}
 				width={80}
 				height={80}
 				className='w-20 mt-[-10px] mb-[-5px] md:w-60 md:-mb-[15px] z-10'
@@ -25,9 +26,8 @@ const LoginForm = () => {
 			/>
 			<div
 				className='flex flex-col w-[90%] md:w-[60%] lg:w-[35%]
-				place-content-center border border-background-box-border rounded-xl
-				bg-background-box-rect p-5'
-			>
+				place-content-center border border-background-200 rounded-xl
+				bg-pink-100 p-5'>
 				{/* Login Form */}
 				<form className='flex flex-col w-full h-full gap-2 p-2'>
 					<h1 className='text-center font-bold text-3xl'>Login</h1>
@@ -35,7 +35,7 @@ const LoginForm = () => {
 					{/* Usuário */}
 					<div className='flex flex-row w-full m-2'>
 						<input
-							className='w-full h-full bg-input-box rounded-full
+							className='w-full h-full bg-pink-200 rounded-full
 							text-gray-500 px-4 py-2 gap-2'
 							type='text'
 							placeholder='Usuário'
@@ -47,7 +47,7 @@ const LoginForm = () => {
 					{/* Senha */}
 					<div className='flex flex-row w-full m-2'>
 						<input
-							className='w-full h-full bg-input-box rounded-full
+							className='w-full h-full bg-pink-200 rounded-full
 							text-gray-500 px-4 py-2 gap-2'
 							type='password'
 							placeholder='Senha'
@@ -58,76 +58,55 @@ const LoginForm = () => {
 
 					{/* Esqueceu a senha? */}
 					<Link
-						href={"#"}
-						className='text-gray-500 text-right	hover:underline decoration-button-purple text-xs md:text-md'
-					>
+						href={'#'}
+						className='text-gray-500 text-right	hover:underline 
+						decoration-purple-100 text-xs md:text-md'>
 						Esqueceu a senha?
 					</Link>
 
 					{/* Botões */}
 					<div className='grid grid-cols-2 gap'>
 						{/* Entrar */}
-						<button
-							type='submit'
-							className='col-span-2 text-center
-							p-2.5 bg-button-purple shadow-def-button 
-							rounded-full m-2.5 text-white text-md lg:text-xl
-							font-semibold hover:underline
-							transition-all active:translate-y-[4px] active:shadow-def-button-pressed'
-						>
+						<DefaultButton type='submit' className='col-span-2'>
 							Entrar
-						</button>
+						</DefaultButton>
 
 						{/* Divisor */}
-						<hr className='border border-gray-500 col-span-2 mt-2.5 mx-2.5 rounded-full' />
+						<hr
+							className='border border-gray-500 
+						col-span-2 mt-2.5 mx-2.5 rounded-full'
+						/>
 
 						{/* Google Login */}
-						<button
-							type='button'
-							className='col-span-2 md:col-span-1 flex flex-row justify-center items-center
-                        p-2.5 gap-2.5 bg-button-purple shadow-def-button 
-                        rounded-full m-2.5 text-white text-md lg:text-xl
-                        font-semibold mouse-pointer hover:underline
-						transition-all active:translate-y-[4px] active:shadow-def-button-pressed'
-						>
+						<DefaultButton className='col-span-2 md:col-span-1 '>
 							<FaGoogle />
 							Google
-						</button>
+						</DefaultButton>
 
 						{/* Github Login */}
-						<button
-							type='button'
-							className='col-span-2 md:col-span-1 flex flex-row justify-center items-center
-                        p-2.5 gap-2.5 bg-button-purple shadow-def-button 
-                        rounded-full m-2.5 text-white text-md lg:text-xl
-                        font-semibold mouse-pointer hover:underline
-						transition-all active:translate-y-[4px] active:shadow-def-button-pressed'
-						>
+						<DefaultButton className='col-span-2 md:col-span-1 '>
 							<FaGithub />
 							Github
-						</button>
+						</DefaultButton>
 					</div>
 				</form>
 
 				{/* Link de cadastro */}
 				<div
 					className='visible md:invisible overflow-hidden md:h-0
-						flex flex-col w-full text-center justify-center p-6 pt-2 gap-1/2'
-				>
+						flex flex-col w-full text-center justify-center p-6 pt-2 gap-1/2'>
 					<p>Não tem uma conta?</p>
 					<Link
-						href={"/register"}
-						className='font-bold text-sm text-button-purple hover:underline decoration-button-purple'
-					>
+						href={'/register'}
+						className='font-bold text-sm text-purple-100 hover:underline decoration-purple-100'>
 						Crie uma conta!
 					</Link>
 				</div>
 
 				{/* Termos e Condições */}
 				<Link
-					href={"/tos"}
-					className='text-center hover:underline decoration-button-purple text-sm'
-				>
+					href={'/tos'}
+					className='text-center hover:underline decoration-purple-100 text-sm'>
 					Termos e condições de uso
 				</Link>
 			</div>
