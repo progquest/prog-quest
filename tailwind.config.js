@@ -8,8 +8,8 @@ module.exports = {
 	theme: {
 		extend: {
 			boxShadow: {
-				'button-default': '0px 10px 0px',
-				'button-active': '0px 6px 0px',
+				'button-default': '0px 10px 0px var(--purple-200)',
+				'button-active': '0px 6px 0px var(--purple-200)',
 			},
 			colors: {
 				text: {
