@@ -1,7 +1,8 @@
+'use client';
 import { DefaultButton } from '@/components/buttons/DefaultButton';
-import LoginForm from '@/components/login-form/LoginForm';
+import { LoginForm, RegisterForm } from '@/components/sign-up-forms';
 import Image from 'next/image';
-import React from 'react';
+import { useState } from 'react';
 
 /**
  * Página de Login
@@ -14,6 +15,8 @@ import React from 'react';
  * @returns {JSX.Element} Elemento JSX da página de login
  */
 const Login = () => {
+	const [isRegister, setIsRegister] = useState(false);
+
 	return (
 		<div className='flex w-screen h-screen text-text-900 bg-background-100'>
 			<div className='flex flex-col overflow-auto w-full h-full px-8 py-4'>
@@ -21,7 +24,9 @@ const Login = () => {
 					{/* Logo Icon */}
 					<div className='flex flex-row gap-4 items-center'>
 						<Image
-							src={'./assets/icons/login-page-icon/logo-icon.svg'}
+							src={
+								'../assets/icons/login-page-icon/logo-icon.svg'
+							}
 							alt='logo'
 							width={60}
 							height={45}
@@ -32,17 +37,26 @@ const Login = () => {
 						</h1>
 					</div>
 
-					{/* Register Button */}
+					{/* Register/Login Button */}
 					<DefaultButton
 						className={`invisible md:visible overflow-hidden h-0 w-0
-							md:h-max md:w-max py-2 px-8`}>
-						Registrar
+							md:h-max md:w-max py-2 px-8`}
+						onClick={() => setIsRegister((prev) => !prev)}>
+						{isRegister ? 'Entrar' : 'Registrar'}
 					</DefaultButton>
 				</nav>
 
 				{/* Login Form */}
 				<div className='flex flex-col w-full h-full justify-center items-center gap-0'>
-					<LoginForm />
+					{/* Chameleon Icon */}
+					<Image
+						src={'/assets/icons/login-page-icon/hide-chameleon.svg'}
+						width={80}
+						height={80}
+						className='w-20 mt-[-10px] mb-[-5px] md:w-60 md:-mb-[15px] z-10'
+						alt='Camaleão olhando por cima da tela de login'
+					/>
+					{isRegister ? <RegisterForm /> : <LoginForm />}
 				</div>
 			</div>
 		</div>

@@ -8,8 +8,8 @@ module.exports = {
 	theme: {
 		extend: {
 			boxShadow: {
-				'button-default': '0px 10px 0px var(--purple-200)',
-				'button-active': '0px 6px 0px var(--purple-200)',
+				'button-default': '0px 10px 0px var(--purple-300)',
+				'button-active': '0px 6px 0px var(--purple-300)',
 			},
 			colors: {
 				text: {
@@ -22,10 +22,15 @@ module.exports = {
 				purple: {
 					100: 'var(--purple-100)',
 					200: 'var(--purple-200)',
+					300: 'var(--purple-300)',
 				},
 				pink: {
 					100: 'var(--pink-100)',
 					200: 'var(--pink-200)',
+				},
+				green: {
+					100: 'var(--green-100)',
+					200: 'var(--green-200)',
 				},
 			},
 			screens: {

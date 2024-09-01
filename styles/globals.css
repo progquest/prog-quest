@@ -8,10 +8,18 @@
 	--text-900: rgb(17, 24, 39);
 	--background-200: rgb(145, 145, 145);
 	--background-100: rgb(225, 225, 225);
-	--purple-100: rgb(139, 82, 254);
-	--purple-200: rgb(69, 45, 102);
-	--pink-100: rgb(246, 235, 251);
-	--pink-200: rgb(219, 201, 243);
+
+	--purple-100: #a47fff;
+	--purple-200: #8b52fe;
+	--purple-300: #452d66;
+
+	--pink-100: #f6ebfb;
+	--pink-200: #dbc9f3;
+	--pink-300: #dbc9f3;
+	--pink-400: #ad9ad7;
+
+	--green-100: #81c784;
+	--green-200: #4caf50;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,10 +27,18 @@
 		--text-900: rgb(17, 24, 39);
 		--background-200: rgb(145, 145, 145);
 		--background-100: rgb(225, 225, 225);
-		--purple-100: rgb(139, 82, 254);
-		--purple-200: rgb(69, 45, 102);
-		--pink-100: rgb(246, 235, 251);
-		--pink-200: rgb(219, 201, 243);
+
+		--purple-100: #a47fff;
+		--purple-200: #8b52fe;
+		--purple-300: #452d66;
+
+		--pink-100: #f6ebfb;
+		--pink-200: #dbc9f3;
+		--pink-300: #dbc9f3;
+		--pink-400: #ad9ad7;
+
+		--green-100: #81c784;
+		--green-200: #4caf50;
 	}
 }
 
