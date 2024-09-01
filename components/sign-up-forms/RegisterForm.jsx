@@ -1,6 +1,4 @@
-import Link from 'next/link';
-
-import { FaEnvelope, FaGithub, FaGoogle, FaLock, FaUser } from 'react-icons/fa';
+import { MdLock, MdPerson, MdMail } from 'react-icons/md';
 import { DefaultButton } from '@/components/buttons/DefaultButton';
 
 /**
@@ -19,42 +17,51 @@ const RegisterForm = () => {
 			<h1 className='text-center font-bold text-3xl'>Registrar</h1>
 
 			{/* Usuário */}
-			<div className='flex flex-row w-full m-2'>
+			<div className='relative flex flex-row m-2 text-background-200'>
 				<input
-					className='w-full h-full bg-pink-200 rounded-full
-							text-purple-300 px-4 py-2 gap-2'
+					className='w-full h-full bg-background-100 rounded-full
+					px-4 py-2 gap-2'
 					type='text'
 					placeholder='Usuário'
 					name='username'
 					required
 				/>
-				<FaUser className='flex-none m-2 transform-y-1/2' />
+				<MdPerson
+					className='absolute right-2.5 translate-y-1/2'
+					size={20}
+				/>
 			</div>
 
 			{/* Email */}
-			<div className='flex flex-row w-full m-2'>
+			<div className='relative flex flex-row m-2 text-background-200'>
 				<input
-					className='w-full h-full bg-pink-200 rounded-full
-							text-purple-300 px-4 py-2 gap-2'
+					className='w-full h-full bg-background-100 rounded-full
+					px-4 py-2 gap-2'
 					type='email'
 					placeholder='Email'
 					name='email'
 					required
 				/>
-				<FaEnvelope className='flex-none m-2 transform-y-1/2' />
+				<MdMail
+					className='absolute right-2.5 translate-y-1/2'
+					size={20}
+				/>
 			</div>
 
 			{/* Senha */}
-			<div className='flex flex-row w-full m-2'>
+			<div className='relative flex flex-row m-2 text-background-200'>
 				<input
-					className='w-full h-full bg-pink-200 rounded-full
-							text-purple-300 px-4 py-2 gap-2'
+					className='w-full h-full bg-background-100 rounded-full
+					t	px-4 py-2 gap-2'
 					type='password'
 					placeholder='Senha'
 					name='password'
 					required
 				/>
-				<FaLock className='flex-none m-2 transform-y-1/2' />
+				<MdLock
+					className='absolute right-2.5 translate-y-1/2'
+					size={20}
+				/>
 			</div>
 
 			{/* Entrar */}

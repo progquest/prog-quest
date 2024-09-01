@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { FaGithub, FaGoogle, FaLock, FaUser } from 'react-icons/fa';
+import { MdLock, MdPerson } from 'react-icons/md';
 import { DefaultButton } from '../buttons/DefaultButton';
 
 /**
@@ -16,37 +16,43 @@ const LoginForm = () => {
 	return (
 		<form className='flex flex-col w-full h-full gap-2 p-2'>
 			{/* Login Form */}
-			<h1 className='text-center font-bold text-3xl'>Entrar</h1>
+			<h1 className='text-center font-bold text-3xl'>Fazer Login</h1>
 
 			{/* Usuário */}
-			<div className='flex flex-row w-full m-2'>
+			<div className='relative flex flex-row m-2 text-background-200'>
 				<input
-					className='w-full h-full bg-pink-200 rounded-full
-							text-gray-500 px-4 py-2 gap-2'
+					className='w-full h-full bg-background-100 rounded-full
+					px-4 py-2 gap-2'
 					type='text'
 					placeholder='Usuário'
 					required
 				/>
-				<FaUser className='flex-none m-2 transform-y-1/2' />
+				<MdPerson
+					className='absolute right-2.5 translate-y-1/2'
+					size={20}
+				/>
 			</div>
 
 			{/* Senha */}
-			<div className='flex flex-row w-full m-2'>
+			<div className='relative flex flex-row m-2 text-background-200'>
 				<input
-					className='w-full h-full bg-pink-200 rounded-full
-							text-gray-500 px-4 py-2 gap-2'
+					className='w-full h-full bg-background-100 rounded-full
+					px-4 py-2 gap-2'
 					type='password'
 					placeholder='Senha'
 					required
 				/>
-				<FaLock className='flex-none m-2 transform-y-1/2' />
+				<MdLock
+					className='absolute right-2.5 translate-y-1/2'
+					size={20}
+				/>
 			</div>
 
 			{/* Esqueceu a senha? */}
 			<Link
 				href={'#'}
-				className='text-gray-500 text-right	hover:underline 
-				mx-2.5 decoration-purple-100 text-xs md:text-md'>
+				className='text-right hover:underline mx-2.5 
+				decoration-purple-100 text-sm md:text-md'>
 				Esqueceu a senha?
 			</Link>
 			{/* Entrar */}

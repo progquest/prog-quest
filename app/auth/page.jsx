@@ -4,7 +4,6 @@ import { LoginForm, RegisterForm } from '@/components/sign-up-forms';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 /**
  * Página de Login
@@ -26,9 +25,7 @@ const Login = () => {
 					{/* Logo Icon */}
 					<div className='flex flex-row gap-4 items-center'>
 						<Image
-							src={
-								'../assets/icons/login-page-icon/logo-icon.svg'
-							}
+							src={'./assets/icons/login-page-icon/logo-icon.svg'}
 							alt='logo'
 							width={60}
 							height={45}
@@ -44,7 +41,7 @@ const Login = () => {
 						className={`invisible md:visible overflow-hidden h-0 w-0
 							md:h-max md:w-max py-2 px-8`}
 						onClick={() => setIsRegister((prev) => !prev)}>
-						{isRegister ? 'Entrar' : 'Registrar'}
+						{isRegister ? 'Fazer Login' : 'Registrar'}
 					</DefaultButton>
 				</nav>
 
@@ -75,13 +72,23 @@ const Login = () => {
 
 							{/* Google Login */}
 							<DefaultButton className='col-span-2 md:col-span-1 '>
-								<FaGoogle />
+								<Image
+									src={'/assets/icons/misc/logo-google.svg'}
+									width={20}
+									height={20}
+									alt='Google Logo'
+								/>
 								Google
 							</DefaultButton>
 
 							{/* Github Login */}
 							<DefaultButton className='col-span-2 md:col-span-1 '>
-								<FaGithub />
+								<Image
+									src={'/assets/icons/misc/logo-github.svg'}
+									width={20}
+									height={20}
+									alt='Github Logo'
+								/>
 								Github
 							</DefaultButton>
 						</div>
