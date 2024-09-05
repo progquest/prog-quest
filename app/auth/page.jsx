@@ -1,6 +1,7 @@
 'use client';
 import { DefaultButton } from '@/components/buttons/DefaultButton';
 import { LoginForm, RegisterForm } from '@/components/sign-up-forms';
+import TermsOfService from '@/components/terms-of-service/TermsOfService';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -17,9 +18,16 @@ import { useState } from 'react';
  */
 const Login = () => {
 	const [isRegister, setIsRegister] = useState(false);
+	const [tosVisible, setTosVisible] = useState(false);
 
 	return (
-		<div className='flex w-screen h-screen text-text-900 bg-background-100'>
+		<div className='relative flex w-screen h-screen text-text-900 bg-background-100 overflow-hidden'>
+			<div
+				className={`absolute flex items-center justify-center w-screen h-screen
+				transition-all bg-black bg-opacity-20 ${!tosVisible && 'invisible'}`}>
+				<TermsOfService setVisible={setTosVisible}></TermsOfService>
+			</div>
+
 			<div className='flex flex-col overflow-auto w-full h-full px-8 py-4'>
 				<nav className='flex flex-row w-full md:justify-between justify-center'>
 					{/* Logo Icon */}
@@ -60,7 +68,11 @@ const Login = () => {
 						place-content-center border border-background-200 rounded-xl
 						bg-pink-100 p-5'>
 						{/* Form de Registro/Login */}
-						{isRegister ? <RegisterForm /> : <LoginForm />}
+						{isRegister ? (
+							<RegisterForm setTosVisible={setTosVisible} />
+						) : (
+							<LoginForm />
+						)}
 
 						{/* Botões OAuth */}
 						<div className='grid grid-cols-2 gap mx-2.5 -mt-6 md:-mt-2'>
@@ -107,11 +119,14 @@ const Login = () => {
 						</div>
 
 						{/* Termos e Condições */}
-						<Link
-							href={'/tos'}
-							className='text-center hover:underline decoration-purple-200 text-sm'>
-							Termos e condições de uso
-						</Link>
+						{!isRegister && (
+							<div
+								onClick={() => setTosVisible(true)}
+								className='text-center hover:underline
+								decoration-purple-200 text-sm cursor-pointer'>
+								Termos e condições de uso
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
