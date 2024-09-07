@@ -9,7 +9,7 @@ const Home = () => {
 	return (
 		<h1>
 			Landing Page
-			<Link href={'/login'}>
+			<Link href={'/auth'}>
 				<DefaultButton>Login Page</DefaultButton>
 			</Link>
 		</h1>

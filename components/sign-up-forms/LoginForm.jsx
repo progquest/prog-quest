@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { MdLock, MdPerson } from 'react-icons/md';
-import { DefaultButton } from '../buttons/DefaultButton';
+import { DefaultButton } from '@/components/buttons';
 
 /**
  * Um quadro com forms de login para credenciais e OAuth
@@ -56,11 +56,7 @@ const LoginForm = () => {
 				Esqueceu a senha?
 			</Link>
 			{/* Entrar */}
-			<DefaultButton
-				type='submit'
-				className='col-span-2'>
-				Entrar
-			</DefaultButton>
+			<DefaultButton type='submit'>Entrar</DefaultButton>
 		</form>
 	);
 };

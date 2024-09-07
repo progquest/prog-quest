@@ -1,18 +1,15 @@
 'use client';
-import React from 'react';
-import { MdClose } from 'react-icons/md';
-
-const TermsOfService = ({ setVisible = () => {} }) => {
+/**
+ * Um painel com os termos de serviço da plataforma
+ * @returns {JSX.Element} Um painel com os termos de serviço da plataforma
+ */
+const TermsOfService = ({ children }) => {
 	return (
 		<div
 			className='relative z-30 max-w-4xl bg-pink-100 p-12 md:px-36 md:py-20
             max-h-[90vh] overflow-scroll mx-14 my-30'>
-			<MdClose
-				size={45}
-				className='absolute right-4 top-4 cursor-pointer'
-				onClick={() => setVisible(false)}
-			/>
-			<div className=''>
+			{children}
+			<div>
 				<h1>Termos e Condições de Uso - ProgQuest</h1>
 				<br />
 				<p>

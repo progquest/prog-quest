@@ -1,31 +1,44 @@
 'use client';
-import { DefaultButton } from '@/components/buttons/DefaultButton';
+import { DefaultButton } from '@/components/buttons';
 import { LoginForm, RegisterForm } from '@/components/sign-up-forms';
-import TermsOfService from '@/components/terms-of-service/TermsOfService';
+import { TermsOfService } from '@/components/terms-of-service';
+
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
+import { MdClose } from 'react-icons/md';
 
 /**
  * Página de Login
  *
  * Essa página renderiza:
  *  - O logotipo da ProgQuest
- *  - Um botão de cadastro
- *  - O formulário de login, com campos para o usuário e senha
+ *  - Um botão para mudar entre cadastro e login
+ *  - O formulário de login e de registro
  *
- * @returns {JSX.Element} Elemento JSX da página de login
+ * @returns {JSX.Element} Elemento JSX da página de autenticação
  */
-const Login = () => {
+const Auth = () => {
+	// Usado para saber se usuário está tentado registrar uma
+	// conta ou fazendo login
 	const [isRegister, setIsRegister] = useState(false);
+
+	// Usado para mostrar ou esconder o painel de termos de serviço
 	const [tosVisible, setTosVisible] = useState(false);
 
 	return (
 		<div className='relative flex w-screen h-screen text-text-900 bg-background-100 overflow-hidden'>
+			{/* Termos de Serviço */}
 			<div
 				className={`absolute flex items-center justify-center w-screen h-screen
 				transition-all bg-black bg-opacity-20 ${!tosVisible && 'invisible'}`}>
-				<TermsOfService setVisible={setTosVisible}></TermsOfService>
+				<TermsOfService>
+					{/* Botão de fechar o Termos de Serviço */}
+					<MdClose
+						size={45}
+						className='absolute right-4 top-4 cursor-pointer'
+						onClick={() => setTosVisible(false)}
+					/>
+				</TermsOfService>
 			</div>
 
 			<div className='flex flex-col overflow-auto w-full h-full px-8 py-4'>
@@ -83,7 +96,7 @@ const Login = () => {
 							/>
 
 							{/* Google Login */}
-							<DefaultButton className='col-span-2 md:col-span-1 '>
+							<DefaultButton className='col-span-2 md:col-span-1'>
 								<Image
 									src={'/assets/icons/misc/logo-google.svg'}
 									width={20}
@@ -94,7 +107,7 @@ const Login = () => {
 							</DefaultButton>
 
 							{/* Github Login */}
-							<DefaultButton className='col-span-2 md:col-span-1 '>
+							<DefaultButton className='col-span-2 md:col-span-1'>
 								<Image
 									src={'/assets/icons/misc/logo-github.svg'}
 									width={20}
@@ -134,4 +147,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Auth;

@@ -1,6 +1,5 @@
 import { MdLock, MdPerson, MdMail } from 'react-icons/md';
-import { DefaultButton } from '@/components/buttons/DefaultButton';
-import Link from 'next/link';
+import { DefaultButton } from '@/components/buttons';
 
 /**
  * Um quadro com forms de cadastro para credenciais e OAuth
@@ -78,11 +77,7 @@ const RegisterForm = ({ setTosVisible = () => {} }) => {
 				</div>
 			</div>
 			{/* Registrar */}
-			<DefaultButton
-				type='submit'
-				className='col-span-2'>
-				Registrar
-			</DefaultButton>
+			<DefaultButton type='submit'>Registrar</DefaultButton>
 		</form>
 	);
 };
