@@ -1,4 +1,4 @@
-import { DefaultButton } from '@/components/buttons/DefaultButton';
+import { DefaultButton } from '@/components/buttons';
 import Link from 'next/link';
 
 /**
