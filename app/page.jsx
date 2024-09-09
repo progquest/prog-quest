@@ -1,5 +1,4 @@
-import { DefaultButton } from '@/components/buttons';
-import Link from 'next/link';
+import Navbar from '@/components/nav-bar/Navbar';
 
 /**
  * Componete da Página inicial do site
@@ -7,12 +6,9 @@ import Link from 'next/link';
  */
 const Home = () => {
 	return (
-		<h1>
-			Landing Page
-			<Link href={'/auth'}>
-				<DefaultButton>Login Page</DefaultButton>
-			</Link>
-		</h1>
+		<div className='bg-background-100 w-full'>
+			<Navbar />
+		</div>
 	);
 };
 
