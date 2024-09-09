@@ -1,55 +1,43 @@
-import Image from 'next/image';
+'use client';
 import Link from 'next/link';
-import React from 'react';
+import { HorizontalLogo } from '@/components/logo';
 
+/**
+ * Um elemento de barra de navegação que está sempre no topo da página.
+ *
+ * Essa barra de navegação tem um logotipo da ProgQuest, e um link para
+ * cada uma das páginas do site: `Home`, `About`, `Contact` e `Sign-Up`.
+ *
+ * @returns {JSX.Element} A barra de navegação
+ */
 const Navbar = () => {
 	return (
 		<header
-			className='fixed top-0 left-0 w-full px-5 py-1/6 bg-background-200
+			className='fixed top-0 left-0 w-full px-5 py-4 bg-background-200
       flex justify-between items-center z-10'>
-			<Link
-				href='/'
-				className='text-2xl text-white font-bold flex items-center'>
-				<Image
-					alt='logo'
-					src={'/assets/icons/login-page-icon/logo-icon.svg'}
-					width={60}
-					height={60}
-				/>
-				ProgQuest
+			<Link href='/'>
+				<HorizontalLogo className='text-white' />
 			</Link>
 
 			<nav>
 				<Link
 					href='/'
-					className='relative text-md text-white font-medium ml-10
-          before:content-none before:absolute before:w-0 before:h-1
-          before:bg-white before:top-full before:left-0 transition-all
-          hover:before:w-full'>
+					className='relative text-md text-white font-medium ml-10'>
 					Home
 				</Link>
 				<Link
 					href='/'
-					className='relative text-md text-white font-medium ml-10
-          before:content-none before:absolute before:w-0 before:h-1
-          before:bg-white before:top-full before:left-0 transition-all
-          hover:before:w-full'>
+					className='relative text-md text-white font-medium ml-10'>
 					About
 				</Link>
 				<Link
 					href='/'
-					className='relative text-md text-white font-medium ml-10
-          before:content-none before:absolute before:w-0 before:h-1
-          before:bg-white before:top-full before:left-0 transition-all
-          hover:before:w-full'>
+					className='relative text-md text-white font-medium ml-10'>
 					Contact
 				</Link>
 				<Link
 					href='/auth'
-					className='relative text-md text-white font-medium ml-10
-          before:content-none before:absolute before:w-0 before:h-1
-          before:bg-white before:top-full before:left-0 transition-all
-          hover:before:w-full'>
+					className='relative text-md text-white font-medium ml-10'>
 					Sign-Up
 				</Link>
 			</nav>

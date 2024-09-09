@@ -61,7 +61,7 @@ const RegisterForm = ({ setTosVisible = () => {} }) => {
 				/>
 			</div>
 			{/* Termos de Uso */}
-			<div className='flex text-center mx-2.5 align-center justify-center text-sm md:text-lg'>
+			<div className='flex text-center mx-2.5 items-center justify-center text-sm'>
 				<input
 					type='checkbox'
 					name='tos'
@@ -69,12 +69,16 @@ const RegisterForm = ({ setTosVisible = () => {} }) => {
 					required
 				/>
 				Aceito os
-				<div
-					onClick={() => setTosVisible(true)}
-					className='text-purple-200 hover:underline 
-					decoration-black ml-1 cursor-pointer'>
+				<a
+					href=''
+					onClick={(e) => {
+						e.preventDefault();
+						setTosVisible(true);
+					}}
+					className='text-purple-200 hover:scale-[1.01]
+					active:scale-100 transition-all ml-1 cursor-pointer'>
 					Termos e condições de uso
-				</div>
+				</a>
 			</div>
 			{/* Registrar */}
 			<DefaultButton type='submit'>Registrar</DefaultButton>

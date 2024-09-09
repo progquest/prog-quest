@@ -1,9 +1,11 @@
 'use client';
 import { DefaultButton } from '@/components/buttons';
+import { HorizontalLogo } from '@/components/logo';
 import { LoginForm, RegisterForm } from '@/components/sign-up-forms';
 import { TermsOfService } from '@/components/terms-of-service';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 
@@ -26,41 +28,39 @@ const Auth = () => {
 	const [tosVisible, setTosVisible] = useState(false);
 
 	return (
-		<div className='relative flex w-screen h-screen text-text-900 bg-background-100 overflow-hidden'>
+		<div
+			className='relative flex w-screen h-screen
+			text-text-900 bg-background-100 overflow-clip'>
 			{/* Termos de Serviço */}
-			<div
-				className={`absolute flex items-center justify-center w-screen h-screen
-				transition-all bg-black bg-opacity-20 ${!tosVisible && 'invisible'}`}>
+			{tosVisible && (
 				<TermsOfService>
-					{/* Botão de fechar o Termos de Serviço */}
-					<MdClose
-						size={45}
-						className='absolute right-4 top-4 cursor-pointer'
-						onClick={() => setTosVisible(false)}
-					/>
-				</TermsOfService>
-			</div>
-
-			<div className='flex flex-col overflow-auto w-full h-full px-8 py-4'>
-				<nav className='flex flex-row w-full md:justify-between justify-center'>
-					{/* Logo Icon */}
-					<div className='flex flex-row gap-4 items-center'>
-						<Image
-							src={'./assets/icons/login-page-icon/logo-icon.svg'}
-							alt='logo'
-							width={60}
-							height={45}
-							className='w-[60px] h-[45px] md:w-[120px] md:h-[90px]'
+					<a
+						href=''
+						onClick={(e) => {
+							e.preventDefault();
+							setTosVisible(false);
+						}}
+						className='absolute right-4 top-4 cursor-pointer'>
+						<MdClose
+							size={45}
+							className='hover:scale-105 transition-all focus:scale-105
+						active:scale-[0.9]'
 						/>
-						<h1 className='text-2xl md:text-4xl font-bolder text-purple-100'>
-							ProgQuest
-						</h1>
-					</div>
+					</a>
+				</TermsOfService>
+			)}
+
+			<div className='flex flex-col overflow-auto w-full h-full px-8 py-2'>
+				<nav className='flex flex-row w-full md:justify-between justify-center items-center'>
+					{/* Logo Icon */}
+					<Link href='/'>
+						<HorizontalLogo className='text-purple-200' />
+					</Link>
 
 					{/* Register/Login Button */}
 					<DefaultButton
 						className={`invisible md:visible overflow-hidden h-0 w-0
-							md:h-max md:w-max py-2 px-8`}
+							md:h-max md:w-max px-8 py-1`}
 						onClick={() => setIsRegister((prev) => !prev)}>
 						{isRegister ? 'Fazer Login' : 'Registrar'}
 					</DefaultButton>
@@ -133,12 +133,17 @@ const Auth = () => {
 
 						{/* Termos e Condições */}
 						{!isRegister && (
-							<div
-								onClick={() => setTosVisible(true)}
-								className='text-center hover:underline
-								decoration-purple-200 text-sm cursor-pointer'>
+							<a
+								href=''
+								onClick={(e) => {
+									e.preventDefault();
+									setTosVisible(true);
+								}}
+								className='text-purple-200 hover:scale-[1.01] text-center
+									active:scale-100 transition-all cursor-pointer
+									mx-2.5'>
 								Termos e condições de uso
-							</div>
+							</a>
 						)}
 					</div>
 				</div>
