@@ -1,17 +1,34 @@
 'use client';
+
+import { useContext } from 'react';
+import { TosVisibleContext } from '@/app/auth/page';
+import { MdClose } from 'react-icons/md';
+
 /**
  * Um painel com os termos de serviço da plataforma
  * @returns {JSX.Element} Um painel com os termos de serviço da plataforma
  */
-const TermsOfService = ({ className = '', children }) => {
+const TermsOfService = () => {
+	const { tosVisible, setTosVisible } = useContext(TosVisibleContext);
+
 	return (
 		<div
-			className={`absolute z-30  w-screen h-screen flex items-center justify-center
-			transition-all bg-black bg-opacity-20 ${className}`}>
+			className={`absolute top-0 z-30 w-screen h-screen flex items-center 
+				justify-center transition-all bg-black bg-opacity-20 
+				left-0 ${!tosVisible && 'hidden'}`}>
 			<div
 				className='relative max-w-4xl bg-pink-100 p-12 md:px-36 md:py-15
-            	max-h-[90vh] overflow-scroll mx-14 my-30 rounded-md'>
-				{children}
+            	max-h-[90vh] overflow-scroll mx-14 my-30 rounded-md animate-fade-in-up'>
+				<button
+					autoFocus={tosVisible}
+					onClick={() => setTosVisible(false)}
+					className='absolute right-4 top-4'>
+					<MdClose
+						size={45}
+						className='hover:scale-105 transition-all focus:scale-105
+						active:scale-[0.9]'
+					/>
+				</button>
 				<div>
 					<h1>Termos e Condições de Uso - ProgQuest</h1>
 					<br />

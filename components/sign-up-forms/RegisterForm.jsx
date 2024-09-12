@@ -1,6 +1,9 @@
 import { MdLock, MdPerson, MdMail } from 'react-icons/md';
 import { DefaultButton } from '@/components/buttons';
 
+import { TosVisibleContext } from '@/app/auth/page';
+import { useContext } from 'react';
+
 /**
  * Um quadro com forms de cadastro para credenciais e OAuth
  *
@@ -10,7 +13,8 @@ import { DefaultButton } from '@/components/buttons';
  * TODO: Fazer a autenticação funcional
  * @returns {JSX.Element}
  */
-const RegisterForm = ({ setTosVisible = () => {} }) => {
+const RegisterForm = () => {
+	const { setTosVisible } = useContext(TosVisibleContext);
 	return (
 		<form className='flex flex-col w-full h-full gap-2 p-2'>
 			{/* Register Form */}
@@ -69,8 +73,7 @@ const RegisterForm = ({ setTosVisible = () => {} }) => {
 					required
 				/>
 				Aceito os
-				<a
-					href=''
+				<button
 					onClick={(e) => {
 						e.preventDefault();
 						setTosVisible(true);
@@ -78,7 +81,7 @@ const RegisterForm = ({ setTosVisible = () => {} }) => {
 					className='text-purple-200 hover:scale-[1.01]
 					active:scale-100 transition-all ml-1 cursor-pointer'>
 					Termos e condições de uso
-				</a>
+				</button>
 			</div>
 			{/* Registrar */}
 			<DefaultButton type='submit'>Registrar</DefaultButton>

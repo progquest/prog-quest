@@ -6,8 +6,10 @@ import { TermsOfService } from '@/components/terms-of-service';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { MdClose } from 'react-icons/md';
+
+export const TosVisibleContext = createContext();
 
 /**
  * Página de Login
@@ -29,125 +31,114 @@ const Auth = () => {
 
 	return (
 		<div
-			className='relative flex w-screen h-screen
-			text-text-900 bg-background-100 overflow-clip'>
-			{/* Termos de Serviço */}
-			{tosVisible && (
-				<TermsOfService>
-					<a
-						href=''
-						onClick={(e) => {
-							e.preventDefault();
-							setTosVisible(false);
-						}}
-						className='absolute right-4 top-4 cursor-pointer'>
-						<MdClose
-							size={45}
-							className='hover:scale-105 transition-all focus:scale-105
-						active:scale-[0.9]'
-						/>
-					</a>
-				</TermsOfService>
-			)}
+			className='relative flex w-screen h-screen max-h-screen max-w-screen
+				text-text-900 bg-background-100 overflow-clip'>
+			<TosVisibleContext.Provider value={{ tosVisible, setTosVisible }}>
+				<div className='flex flex-col overflow-auto w-full h-full px-8 py-2'>
+					<nav className='flex flex-row w-full md:justify-between justify-center items-center'>
+						{/* Logo Icon */}
+						<Link href='/'>
+							<HorizontalLogo className='text-purple-200' />
+						</Link>
 
-			<div className='flex flex-col overflow-auto w-full h-full px-8 py-2'>
-				<nav className='flex flex-row w-full md:justify-between justify-center items-center'>
-					{/* Logo Icon */}
-					<Link href='/'>
-						<HorizontalLogo className='text-purple-200' />
-					</Link>
-
-					{/* Register/Login Button */}
-					<DefaultButton
-						className={`invisible md:visible overflow-hidden h-0 w-0
+						{/* Register/Login Button */}
+						<DefaultButton
+							className={`invisible md:visible overflow-hidden h-0 w-0
 							md:h-max md:w-max px-8 py-1`}
-						onClick={() => setIsRegister((prev) => !prev)}>
-						{isRegister ? 'Fazer Login' : 'Registrar'}
-					</DefaultButton>
-				</nav>
+							onClick={() => setIsRegister((prev) => !prev)}>
+							{isRegister ? 'Fazer Login' : 'Registrar'}
+						</DefaultButton>
+					</nav>
 
-				{/* Login Form */}
-				<div className='flex flex-col w-full h-full justify-center items-center gap-0'>
-					{/* Chameleon Icon */}
-					<Image
-						src={'/assets/icons/login-page-icon/hide-chameleon.svg'}
-						width={80}
-						height={80}
-						className='w-20 mt-[-10px] mb-[-5px] md:w-60 md:-mb-[15px] z-10'
-						alt='Camaleão olhando por cima da tela de login'
-					/>
-					<div
-						className='flex flex-col w-[90%] md:w-[60%] lg:w-[35%]
+					{/* Login Form */}
+					<div className='flex flex-col w-full h-full justify-center items-center gap-0'>
+						{/* Chameleon Icon */}
+						<Image
+							src={
+								'/assets/icons/login-page-icon/hide-chameleon.svg'
+							}
+							width={80}
+							height={80}
+							className='w-20 mt-[-10px] mb-[-5px] md:w-60 md:-mb-[15px] z-10'
+							alt='Camaleão olhando por cima da tela de login'
+						/>
+						<div
+							className='flex flex-col w-[90%] md:w-[60%] lg:w-[35%]
 						place-content-center border border-background-200 rounded-xl
 						bg-pink-100 p-5'>
-						{/* Form de Registro/Login */}
-						{isRegister ? (
-							<RegisterForm setTosVisible={setTosVisible} />
-						) : (
-							<LoginForm />
-						)}
+							{/* Form de Registro/Login */}
+							{isRegister ? <RegisterForm /> : <LoginForm />}
 
-						{/* Botões OAuth */}
-						<div className='grid grid-cols-2 gap mx-2.5 -mt-6 md:-mt-2'>
-							{/* Divisor */}
-							<hr
-								className='border border-gray-500 
+							{/* Botões OAuth */}
+							<div className='grid grid-cols-2 gap mx-2.5 -mt-6 md:-mt-2'>
+								{/* Divisor */}
+								<hr
+									className='border border-gray-500 
 								col-span-2 mt-2.5 mx-2.5 rounded-full'
-							/>
-
-							{/* Google Login */}
-							<DefaultButton className='col-span-2 md:col-span-1'>
-								<Image
-									src={'/assets/icons/misc/logo-google.svg'}
-									width={20}
-									height={20}
-									alt='Google Logo'
 								/>
-								Google
-							</DefaultButton>
 
-							{/* Github Login */}
-							<DefaultButton className='col-span-2 md:col-span-1'>
-								<Image
-									src={'/assets/icons/misc/logo-github.svg'}
-									width={20}
-									height={20}
-									alt='Github Logo'
-								/>
-								Github
-							</DefaultButton>
-						</div>
+								{/* Google Login */}
+								<DefaultButton className='col-span-2 md:col-span-1'>
+									<Image
+										src={
+											'/assets/icons/misc/logo-google.svg'
+										}
+										width={20}
+										height={20}
+										alt='Google Logo'
+									/>
+									Google
+								</DefaultButton>
 
-						{/* Link de cadastro/login */}
-						<div
-							className='visible md:invisible overflow-hidden md:-my-6
-						flex flex-col w-full text-center justify-center p-6 gap-1/2'>
-							<p>{isRegister ? 'Já' : 'Não'} tem uma conta?</p>
-							<div
-								onClick={() => setIsRegister((prev) => !prev)}
-								className='font-bold text-sm text-purple-200 hover:underline
-                        		decoration-purple-200 cursor-pointer'>
-								{isRegister ? 'Entre' : 'Cadastre'} aqui!
+								{/* Github Login */}
+								<DefaultButton className='col-span-2 md:col-span-1'>
+									<Image
+										src={
+											'/assets/icons/misc/logo-github.svg'
+										}
+										width={20}
+										height={20}
+										alt='Github Logo'
+									/>
+									Github
+								</DefaultButton>
 							</div>
-						</div>
 
-						{/* Termos e Condições */}
-						{!isRegister && (
-							<a
-								href=''
-								onClick={(e) => {
-									e.preventDefault();
-									setTosVisible(true);
-								}}
-								className='text-purple-200 hover:scale-[1.01] text-center
+							{/* Link de cadastro/login */}
+							<div
+								className='visible md:invisible overflow-hidden md:-my-6
+						flex flex-col w-full text-center justify-center p-6 gap-1/2'>
+								<p>
+									{isRegister ? 'Já' : 'Não'} tem uma conta?
+								</p>
+								<div
+									onClick={() =>
+										setIsRegister((prev) => !prev)
+									}
+									className='font-bold text-sm text-purple-200 hover:underline
+                        		decoration-purple-200 cursor-pointer'>
+									{isRegister ? 'Entre' : 'Cadastre'} aqui!
+								</div>
+							</div>
+
+							{/* Termos e Condições */}
+							{!isRegister && (
+								<button
+									onClick={(e) => {
+										e.preventDefault();
+										setTosVisible(true);
+									}}
+									className='text-purple-200 hover:scale-[1.01] text-center
 									active:scale-100 transition-all cursor-pointer
 									mx-2.5'>
-								Termos e condições de uso
-							</a>
-						)}
+									Termos e condições de uso
+								</button>
+							)}
+						</div>
 					</div>
 				</div>
-			</div>
+				<TermsOfService />
+			</TosVisibleContext.Provider>
 		</div>
 	);
 };
