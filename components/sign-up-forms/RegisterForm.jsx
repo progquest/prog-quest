@@ -78,7 +78,7 @@ const RegisterForm = () => {
 						e.preventDefault();
 						setTosVisible(true);
 					}}
-					className='text-purple-200 hover:scale-[1.01]
+					className='text-primary-400 hover:scale-[1.01]
 					active:scale-100 transition-all ml-1 cursor-pointer'>
 					Termos e condições de uso
 				</button>

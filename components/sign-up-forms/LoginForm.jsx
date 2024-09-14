@@ -52,7 +52,7 @@ const LoginForm = () => {
 			<Link
 				href={'#'}
 				className='text-right hover:underline mx-2.5 
-				decoration-purple-200 text-sm md:text-md'>
+				decoration-primary-400 text-sm md:text-md'>
 				Esqueceu a senha?
 			</Link>
 			{/* Entrar */}
