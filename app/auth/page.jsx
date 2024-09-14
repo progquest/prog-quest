@@ -38,7 +38,7 @@ const Auth = () => {
 					<nav className='flex flex-row w-full md:justify-between justify-center items-center'>
 						{/* Logo Icon */}
 						<Link href='/'>
-							<HorizontalLogo className='text-purple-200' />
+							<HorizontalLogo className='text-primary-400' />
 						</Link>
 
 						{/* Register/Login Button */}
@@ -111,14 +111,14 @@ const Auth = () => {
 								<p>
 									{isRegister ? 'Já' : 'Não'} tem uma conta?
 								</p>
-								<div
+								<button
 									onClick={() =>
 										setIsRegister((prev) => !prev)
 									}
-									className='font-bold text-sm text-purple-200 hover:underline
-                        		decoration-purple-200 cursor-pointer'>
+									className='font-bold text-sm text-primary-400 hover:underline
+                        		decoration-primary-400 cursor-pointer'>
 									{isRegister ? 'Entre' : 'Cadastre'} aqui!
-								</div>
+								</button>
 							</div>
 
 							{/* Termos e Condições */}
@@ -128,7 +128,7 @@ const Auth = () => {
 										e.preventDefault();
 										setTosVisible(true);
 									}}
-									className='text-purple-200 hover:scale-[1.01] text-center
+									className='text-primary-400 hover:scale-[1.01] text-center
 									active:scale-100 transition-all cursor-pointer
 									mx-2.5'>
 									Termos e condições de uso
