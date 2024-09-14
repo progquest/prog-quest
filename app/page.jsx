@@ -1,5 +1,6 @@
 'use client';
 import { SecondaryButton } from '@/components/buttons';
+import { CreatorsCarousel } from '@/components/misc';
 import { Navigation } from '@/components/nav-bar';
 
 /**
@@ -107,13 +108,16 @@ const Home = () => {
 			</div>
 			{/* Creators Carrousel */}
 			<div className='w-full min-h-[90vh] flex flex-col mt-16'>
-				<div className='flex justify-end items-center p-3'>
+				<div
+					className='flex justify-center md:justify-end items-center p-3
+					mb-12'>
 					<h1
 						className='text-4xl text-black sm:text-5xl md:text-7xl
 						md:leading-[5rem] text-center md:max-w-2xl mx-48'>
 						Membros Criadores
 					</h1>
 				</div>
+				<CreatorsCarousel />
 			</div>
 		</div>
 	);
