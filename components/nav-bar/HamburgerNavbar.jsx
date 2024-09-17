@@ -16,13 +16,6 @@ const HamburgerNavbar = () => {
 
 	return (
 		<>
-			<div
-				className={`absolute top-0 right-0 max-w-md bg-background-100
-                    p-12 flex flex-col z-20 md:hidden transition-all rounded-b-3xl
-                    items-end
-                    ${visible ? 'translate-x-0' : 'translate-x-full'}`}>
-				<NavigationItems className='text-black text-2xl text-center' />
-			</div>
 			<button
 				onClick={() => setVisible((prev) => !prev)}
 				className={`${visible ? 'text-black' : 'text-white'}
@@ -34,6 +27,13 @@ const HamburgerNavbar = () => {
 					<MdDensityMedium size={32} />
 				)}
 			</button>
+			<div
+				className={`absolute top-0 right-0 max-w-md bg-background-100
+                    p-12 flex flex-col z-[19] md:hidden transition-all rounded-b-3xl
+                    items-end
+                    ${visible ? 'translate-x-0' : 'translate-x-full'}`}>
+				<NavigationItems className='text-black text-2xl text-center' />
+			</div>
 		</>
 	);
 };
