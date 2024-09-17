@@ -9,23 +9,21 @@ import { Navigation } from '@/components/nav-bar';
  */
 const Home = () => {
 	return (
-		<div className='bg-white w-full min-h-screen'>
+		<div className='bg-white w-full h-max'>
 			<Navigation />
 			{/* Banner */}
 			<div
-				className='w-full min-h-[90vh] bg-primary-300 rounded-b-[4rem] flex flex-col
-				lg:grid mt-16 lg:grid-cols-2'>
+				className='w-full bg-primary-300 rounded-b-[4rem] flex flex-col
+				lg:flex-row mt-2'>
 				<div
-					className='p-20 pt-0 lg:p-20 flex flex-col items-center
+					className='p-20 flex flex-col items-center
 					lg:items-start text-center lg:text-left'>
 					<h1
-						className='text-4xl text-black mt-16
-						sm:text-5xl md:text-7xl md:leading-[5rem]'>
+						className='text-4xl text-black mt-8
+						sm:text-5xl'>
 						ProgQuest: <br /> Mais alguma.
 					</h1>
-					<p
-						className='text-xl mt-12 font-semibold pr-5
-						lg:mt-16 '>
+					<p className='text-xl mt-8 font-semibold pr-5 '>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Quidem, magni nemo ipsum autem ullam id, culpa minima
 						sunt numquam blanditiis ex, assumenda deleniti. Quis
@@ -33,42 +31,30 @@ const Home = () => {
 					</p>
 					<SecondaryButton
 						onClick={() => {}}
-						className='mt-12 text-2xl mx-2 p-6 px-12'>
+						className='mt-8 text-2xl mx-2 p-6 px-12'>
 						Acessar
 					</SecondaryButton>
 				</div>
-				<div className='p-20 pt-0 lg:p-20 flex justify-center items-center'>
+				<div className='p-16 pt-2 md:pt-24 flex justify-center items-center'>
 					<div
 						className='bg-gray-300 rounded-[4rem] 
-						min-w-[25rem] min-h-[25rem]
-						md:min-w-[30rem] md:min-h-[30rem]
-						lg:min-w-[35rem] lg:min-h-[35rem]
-						xl:min-w-[40rem] xl:min-h-[40rem]'></div>
+						min-w-[25rem] min-h-[25rem]'></div>
 				</div>
 			</div>
 			{/* Hero Section */}
-			<div
-				className='w-full min-h-[90vh] flex flex-col-reverse
-				lg:flex-row mt-16'>
-				<div className='p-20 pt-0 lg:p-20 flex justify-center items-center'>
+			<div className='w-full flex flex-col-reverse lg:flex-row xl:mt-16'>
+				<div className='p-12 flex justify-center items-center'>
 					<div
 						className='bg-gray-300 rounded-[4rem] 
-						min-w-[25rem] min-h-[25rem]
-						md:min-w-[30rem] md:min-h-[30rem]
-						lg:min-w-[35rem] lg:min-h-[35rem]
-						xl:min-w-[40rem] xl:min-h-[40rem]'></div>
+						min-w-[25rem] min-h-[25rem]'></div>
 				</div>
 				<div
-					className='p-20 pt-0 lg:p-20 flex flex-col items-center
+					className='p-12 flex flex-col items-center
 						lg:items-end text-center lg:text-right'>
-					<h1
-						className='text-4xl text-black mt-16
-						sm:text-5xl md:text-7xl md:leading-[5rem]'>
+					<h1 className='text-4xl text-black sm:text-5xl'>
 						Por dentro <br /> dessa viagem
 					</h1>
-					<p
-						className='text-xl mt-12 font-semibold pl-5
-						lg:mt-16 '>
+					<p className='text-xl mt-8 font-semibold pl-5'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Quidem, magni nemo ipsum autem ullam id, culpa minima
 						sunt numquam blanditiis ex, assumenda deleniti. Quis
@@ -76,49 +62,43 @@ const Home = () => {
 					</p>
 					<SecondaryButton
 						onClick={() => {}}
-						className='mt-12 text-2xl mx-2 p-6 px-12
+						className='mt-8 text-2xl mx-2 p-6 px-12
 						bg-purple-500 hover:bg-purple-400 focus:bg-purple-400'>
 						Acessar
 					</SecondaryButton>
 				</div>
 			</div>
 			{/* Knowlage Section */}
-			<div className='w-full min-h-[90vh] flex flex-col mt-16'>
+			<div className='w-full flex flex-col mt-8 min-h-[35rem] xl:mt-16'>
 				<div className='flex justify-center items-center p-3'>
-					<h1
-						className='text-4xl text-black sm:text-5xl md:text-7xl
-						md:leading-[5rem] text-center md:max-w-2xl'>
+					<h1 className='text-4xl text-black sm:text-5xl text-center md:max-w-2xl'>
 						Níveis de Conhecimento
 					</h1>
 				</div>
-				<div className='flex flex-col md:flex-row justify-evenly px-10'>
+				<div
+					className='grid grid-cols-2
+					lg:flex flex-row justify-evenly px-10 flex-grow'>
 					<div
 						className='bg-gray-300 rounded-[4rem]
-						flex-grow min-h-[30rem] m-5
-						xl:min-h-[35rem]'></div>
+						flex-grow m-5'></div>
 					<div
 						className='bg-gray-300 rounded-[4rem]
-						flex-grow min-h-[30rem] m-5
-						xl:min-h-[35rem]'></div>
+						flex-grow m-5'></div>
 					<div
 						className='bg-gray-300 rounded-[4rem]
-						flex-grow min-h-[30rem] m-5
-						xl:min-h-[35rem]'></div>
+						flex-grow m-5 col-span-2'></div>
 				</div>
 			</div>
 			{/* Creators Carrousel */}
-			<div className='w-full min-h-[90vh] flex flex-col mt-16'>
-				<div
-					className='flex justify-center md:justify-end items-center p-3
-					mb-12'>
-					<h1
-						className='text-4xl text-black sm:text-5xl md:text-7xl
-						md:leading-[5rem] text-center md:max-w-2xl mx-48'>
-						Membros Criadores
-					</h1>
-				</div>
+			<div className='w-full flex flex-col mt-8'>
+				<h1 className='text-4xl text-black sm:text-5xl text-center m-10'>
+					Membros Criadores
+				</h1>
+
 				<CreatorsCarousel />
 			</div>
+			{/* Footer */}
+			<div className='mt-16 h-[8rem] bg-background-200'></div>
 		</div>
 	);
 };
