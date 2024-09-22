@@ -65,7 +65,9 @@ const RegisterForm = () => {
 				/>
 			</div>
 			{/* Termos de Uso */}
-			<div className='flex text-center mx-2.5 items-center justify-center text-sm'>
+			<div
+				className='flex text-center mx-2.5 
+				items-center justify-center text-sm'>
 				<input
 					type='checkbox'
 					name='tos'

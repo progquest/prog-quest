@@ -9,14 +9,14 @@ import { Navigation } from '@/components/nav-bar';
  */
 const Home = () => {
 	return (
-		<div className='bg-white w-full h-max'>
+		<div className='bg-white w-full h-max text-sm'>
 			<Navigation />
 			{/* Banner */}
 			<div
 				className='w-full bg-primary-300 rounded-b-[4rem] flex flex-col
 				lg:flex-row mt-2'>
 				<div
-					className='p-20 flex flex-col items-center
+					className='p-20 pb-10 md:pb-20 flex flex-col items-center
 					lg:items-start text-center lg:text-left'>
 					<h1
 						className='text-4xl text-black mt-8

@@ -14,11 +14,12 @@ const TermsOfService = () => {
 	return (
 		<div
 			className={`absolute top-0 z-30 w-screen h-screen flex items-center 
-				justify-center transition-all bg-black bg-opacity-20 
-				left-0 ${!tosVisible && 'hidden'}`}>
+				justify-center transition-all bg-black bg-opacity-20 p-20
+				max-h-screen left-0 ${!tosVisible && 'hidden'}`}>
 			<div
 				className='relative max-w-4xl bg-pink-100 p-12 md:px-36 md:py-15
-            	max-h-[90vh] overflow-scroll mx-14 my-30 rounded-md animate-fade-in-up'>
+            	m-auto rounded-md animate-fade-in-up flex max-h-[90vh]
+				flex-col justify-center items-center'>
 				<button
 					autoFocus={tosVisible}
 					onClick={() => setTosVisible(false)}
@@ -29,9 +30,10 @@ const TermsOfService = () => {
 						active:scale-[0.9]'
 					/>
 				</button>
-				<div>
-					<h1>Termos e Condições de Uso - ProgQuest</h1>
-					<br />
+				<h1 classname='text-md lg:text-lg'>
+					Termos e Condições de Uso - ProgQuest
+				</h1>
+				<div className='overflow-scroll w-full h-full'>
 					<p>
 						Bem-vindo(a) ao ProgQuest, sua plataforma interativa de
 						aprendizado de programação com um toque de cultura pop!

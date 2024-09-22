@@ -21,9 +21,10 @@ const Navigation = () => {
 			{/* Logo */}
 			<Link
 				href='/'
-				className='group'>
+				className='group relative'>
 				<HorizontalLogo
 					className='text-white transition-all group-active:translate-y-0
+					max-w-[50%]
 					group-hover:-translate-y-[2px] group-focus-within:-translate-y-[2px]'
 				/>
 			</Link>
