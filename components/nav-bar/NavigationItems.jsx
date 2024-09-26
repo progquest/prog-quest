@@ -11,7 +11,7 @@ const NavigationItems = ({ className = '' }) => {
 	return (
 		<nav className={className}>
 			<Link
-				href='/'
+				href='#home'
 				className='relative text-md font-medium mx-5 transition-all
 					flex flex-col group'>
 				Home
@@ -20,19 +20,28 @@ const NavigationItems = ({ className = '' }) => {
 						group-hover:w-full group-focus-within:w-full'></div>
 			</Link>
 			<Link
-				href='/'
+				href='#about'
 				className='relative text-md font-medium mx-5 transition-all
 					flex flex-col group'>
-				About
+				Sobre
 				<div
 					className='transition-all h-[2px] w-0 bg-current
 						group-hover:w-full group-focus-within:w-full'></div>
 			</Link>
 			<Link
-				href='/'
+				href='#knowlage'
 				className='relative text-md font-medium mx-5 transition-all
 					flex flex-col group'>
-				Contact
+				Conhecimento
+				<div
+					className='transition-all h-[2px] w-0 bg-current
+						group-hover:w-full group-focus-within:w-full'></div>
+			</Link>
+			<Link
+				href='#contact'
+				className='relative text-md font-medium mx-5 transition-all
+					flex flex-col group'>
+				Contatos
 				<div
 					className='transition-all h-[2px] w-0 bg-current
 						group-hover:w-full group-focus-within:w-full'></div>
@@ -41,7 +50,7 @@ const NavigationItems = ({ className = '' }) => {
 				href='/auth'
 				className='relative text-md font-medium mx-5 transition-all
 					flex flex-col group'>
-				Sign-Up
+				Fazer Login
 				<div
 					className='transition-all h-[2px] w-0 bg-current
 						group-hover:w-full group-focus-within:w-full'></div>

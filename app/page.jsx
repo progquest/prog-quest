@@ -14,7 +14,8 @@ const Home = () => {
 			{/* Banner */}
 			<div
 				className='w-full bg-primary-300 rounded-b-[4rem] flex flex-col
-				lg:flex-row mt-2'>
+				lg:flex-row'
+				id='home'>
 				<div
 					className='p-20 pb-10 md:pb-20 flex flex-col items-center
 					lg:items-start text-center lg:text-left'>
@@ -42,7 +43,9 @@ const Home = () => {
 				</div>
 			</div>
 			{/* Hero Section */}
-			<div className='w-full flex flex-col-reverse lg:flex-row xl:mt-16'>
+			<div
+				className='w-full flex flex-col-reverse lg:flex-row pt-20'
+				id='about'>
 				<div className='p-12 flex justify-center items-center'>
 					<div
 						className='bg-gray-300 rounded-[4rem] 
@@ -69,7 +72,9 @@ const Home = () => {
 				</div>
 			</div>
 			{/* Knowlage Section */}
-			<div className='w-full flex flex-col mt-8 min-h-[35rem] xl:mt-16'>
+			<div
+				className='w-full flex flex-col mt-8 min-h-[35rem] pt-20'
+				id='knowlage'>
 				<div className='flex justify-center items-center p-3'>
 					<h1 className='text-4xl text-black sm:text-5xl text-center md:max-w-2xl'>
 						Níveis de Conhecimento
@@ -90,15 +95,17 @@ const Home = () => {
 				</div>
 			</div>
 			{/* Creators Carrousel */}
-			<div className='w-full flex flex-col mt-8'>
+			<div
+				className='w-full flex flex-col pt-20 mb-20'
+				id='contact'>
 				<h1 className='text-4xl text-black sm:text-5xl text-center m-10'>
-					Membros Criadores
+					Desenvolvedores
 				</h1>
 
 				<CreatorsCarousel />
 			</div>
 			{/* Footer */}
-			<div className='mt-16 h-[8rem] bg-background-200'></div>
+			<div className='h-20 bg-background-200'></div>
 		</div>
 	);
 };
