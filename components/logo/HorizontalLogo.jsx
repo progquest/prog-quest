@@ -14,7 +14,7 @@ const HorizontalLogo = ({ className = '', ...props }) => {
 				text-3xl font-extrabold ${className}`}
 			{...props}>
 			<Image
-				src={'./assets/icons/login-page-icon/logo-icon.svg'}
+				src={'/assets/icons/login-page-icon/logo-icon.svg'}
 				alt='logo'
 				width={60}
 				height={45}

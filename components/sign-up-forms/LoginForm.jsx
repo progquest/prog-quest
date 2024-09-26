@@ -50,7 +50,7 @@ const LoginForm = () => {
 
 			{/* Esqueceu a senha? */}
 			<Link
-				href={'#'}
+				href={'/auth/reset-password'}
 				className='text-right hover:underline mx-2.5 
 				decoration-primary-400 text-sm md:text-md'>
 				Esqueceu a senha?
