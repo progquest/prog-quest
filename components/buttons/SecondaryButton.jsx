@@ -14,8 +14,7 @@ const SecondaryButton = ({ className = '', children, ...props }) => {
 	return (
 		<button
 			{...props}
-			className={`flex flex-row justify-center items-center
-			bg-lime-500 hover:bg-lime-400 focus:bg-lime-400
+			className={`flex flex-row bg-lime-500 hover:bg-lime-400 focus:bg-lime-400
             shadow-md hover:-translate-y-1 active:translate-y-0 focus:-translate-y-1
 			rounded-full text-white font-semibold mouse-pointer transition-all
 			${className}`}>
