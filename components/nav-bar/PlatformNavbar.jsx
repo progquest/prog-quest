@@ -94,7 +94,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 					</Link>
 				</div>
 				{/* SAIR */}
-				<div className='hidden md:block md:w-full'>
+				<div className='md:w-full'>
 					<Link
 						href='#'
 						className='md:w-full flex flex-row shadow-md rounded-full
