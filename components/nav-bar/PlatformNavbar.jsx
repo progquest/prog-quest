@@ -45,7 +45,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 							outline:
 								current === 'exercise' ? 'solid 2px white' : '',
 						}}>
-						<Exercise />
+						<Exercise size={24} />
 						<p className='hidden md:block'>Exercícios</p>
 					</Link>
 					<Link
@@ -59,7 +59,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 							outline:
 								current === 'level' ? 'solid 2px white' : '',
 						}}>
-						<Level />
+						<Level size={24} />
 						<p className='hidden md:block'>Nível</p>
 					</Link>
 					<Link
@@ -75,7 +75,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 									? 'solid 2px white'
 									: '',
 						}}>
-						<Challenges />
+						<Challenges size={24} />
 						<p className='hidden md:block'>Desafios</p>
 					</Link>
 					<Link
@@ -89,7 +89,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 							outline:
 								current === 'profile' ? 'solid 2px white' : '',
 						}}>
-						<AccountCircle />
+						<AccountCircle size={24} />
 						<p className='hidden md:block'>Perfil</p>
 					</Link>
 				</div>
@@ -102,7 +102,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 						focus:-translate-y-1 font-semibold mouse-pointer
 						text-sm py-3 md:py-2 px-3 gap-2 transition-all items-center
 						bg-red-500 hover:bg-red-400 focus:bg-red-400'>
-						<Logout />
+						<Logout size={24} />
 						<p className='hidden md:block'>Sair</p>
 					</Link>
 				</div>

@@ -16,20 +16,24 @@ const ProfilePage = () => {
 				<ProfileInfo />
 				<hr className='border-black w-full self-center my-6' />
 				<p className='flex items-start w-full'>Conquistas</p>
-				<section className='flex flex-row flex-wrap w-full h-full flex-grow justify-around'>
+				<section
+					className='flex flex-row flex-wrap w-full
+					justify-start items-start gap-4 m-4'>
 					{/* CONQUISTAS  */}
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 aspect-[3/4] m-2 md:m-4 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
 				</section>
 			</div>
 		</div>
