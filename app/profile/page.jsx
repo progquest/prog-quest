@@ -17,23 +17,27 @@ const ProfilePage = () => {
 				<hr className='border-black w-full self-center my-6' />
 				<p className='flex items-start w-full'>Conquistas</p>
 				<section
-					className='flex flex-row flex-wrap w-full
-					justify-start items-start gap-4 m-4'>
+					className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
+					xl:grid-cols-7 2xl:grid-cols-9 w-full max-w-screen-2xl gap-4 m-4'>
 					{/* CONQUISTAS  */}
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
-					<div className='w-32 h-44 bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
+					<div className='min-w-32 min-h-44 aspect-[3/4] bg-gray-400 rounded-xl'></div>
 				</section>
 			</div>
 		</div>

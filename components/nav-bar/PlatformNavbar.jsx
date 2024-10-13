@@ -13,7 +13,7 @@ import { BorderButton } from '@/components/buttons';
 
 const PlatformNavbar = ({ current = 'exercise' }) => {
 	return (
-		<aside className='h-full w-full border-gray-400 border-t md:border-r'>
+		<aside className='h-full w-full bg-white border-gray-400 border-t md:border-r'>
 			<nav
 				className='w-full h-full flex flex-row md:flex-col justify-center
 				md:justify-between items-center md:py-8 md:px-4 py-0 px-8 gap-6'>
@@ -58,7 +58,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 						</BorderButton>
 					</Link>
 					<Link
-						href='#'
+						href='/challenges'
 						className='md:w-full group text-black font-semibold
 						rounded-full text-sm focus:outline-none
 						hover:text-primary-400 focus:text-primary-400'>
@@ -70,7 +70,7 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 						</BorderButton>
 					</Link>
 					<Link
-						href='#'
+						href='/profile'
 						className='md:w-full group text-black font-semibold
 						rounded-full text-sm focus:outline-none
 						hover:text-primary-400 focus:text-primary-400'>
