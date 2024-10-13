@@ -56,6 +56,14 @@ const Icons = [
 	/>,
 ];
 
+/**
+ * Página de nível de conhecimento do usuário
+ *
+ * Esta página mostrará qual nível de conhecimento o usuário está atualmente,
+ * e uma breve descrição do que o nível significa.
+ *
+ * @returns {JSX.Element} Elemento JSX da página de nível de conhecimento
+ */
 const LevelPage = () => {
 	const [level, setLevel] = useState(0);
 

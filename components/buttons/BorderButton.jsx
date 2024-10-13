@@ -1,3 +1,12 @@
+'use client';
+
+/**
+ * Um botão com borda e fundo transparente
+ *
+ * @param {string} [className] - Classes tailwind adicionais.
+ * @param {boolean} [selected=false] - Se o botão está selecionado
+ * @returns {JSX.Element} O botão com borda e fundo transparente
+ */
 const BorderButton = ({ children, className = '', selected = false }) => {
 	return (
 		<div

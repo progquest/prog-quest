@@ -6,6 +6,12 @@ import { createContext, useState } from 'react';
 
 export const CurrentMainPage = createContext();
 
+/**
+ * Responsável por renderizar a barra de navegação e a página principal
+ * de acordo com a página atual.
+ *
+ * @returns {JSX.Element} Elemento JSX da página principal
+ */
 const MainPage = () => {
 	const [page, setPage] = useState('profile');
 

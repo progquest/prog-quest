@@ -13,6 +13,13 @@ import { BorderButton } from '@/components/buttons';
 import { CurrentMainPage } from '@/app/app/page';
 import { useContext } from 'react';
 
+/**
+ * Componente de barra lateral que aparece na tela do usuário.
+ * A barra tem uma lista de navegação com links para as páginas de exercícios,
+ * níveis, desafios, perfil e sair.
+ *
+ * @returns {JSX.Element} Componente da barra lateral
+ */
 const PlatformNavbar = () => {
 	const [page, setPage] = useContext(CurrentMainPage);
 

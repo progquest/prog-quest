@@ -2,6 +2,14 @@
 
 import ProfileInfo from '@/components/profile/ProfileInfo';
 
+/**
+ * Componente da Página de Perfil
+ *
+ * Essa página é responsável por mostrar as informações do usuário, como seu nome,
+ * nível e descrição. Além disso, também exibe as conquistas do usuário.
+ *
+ * @returns {JSX.Element} Elemento JSX da página de perfil
+ */
 const ProfilePage = () => {
 	return (
 		<div

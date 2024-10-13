@@ -7,6 +7,18 @@ import { DefaultButton } from '../buttons';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
+/**
+ * Formulário para redefinir a senha de um usuário
+ *
+ * Esse componente renderiza um formulário para redefinir a senha do usuário,
+ * com campos para a nova senha e sua confirmação. O formulário é submetido
+ * através do botão "Enviar".
+ *
+ * Se o formulário for submetido com sucesso, o componente renderiza uma
+ * mensagem de sucesso com um camaleão celebrando.
+ *
+ * @returns {JSX.Element} Elemento JSX do formulário de redefinição de senha
+ */
 const ResetPasswordForm = () => {
 	const router = useRouter();
 

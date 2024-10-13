@@ -13,6 +13,14 @@ const fakeUser = {
 	img: 'https://ui-avatars.com/api/?background=random&name=Emily+Jhonson&format=png&size=128',
 };
 
+/**
+ * Componente que renderiza as informações do usuário
+ *
+ * Este componente é responsável por renderizar as informações do usuário,
+ * como seu nome, nível, pontos, biografia e imagem de perfil.
+ *
+ * @returns {JSX.Element} Elemento JSX que representa as informações do usuário
+ */
 const ProfileInfo = () => {
 	const [bio, setBio] = useState(fakeUser?.bio);
 	const [changeBio, setChangeBio] = useState(false);

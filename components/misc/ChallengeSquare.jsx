@@ -2,6 +2,26 @@
 
 import { ChallengeCup } from '@/components/svgs';
 
+/**
+ * Componente que representa um quadrado de desafio no grid.
+ *
+ * Esse componente recebe 3 props:
+ * - `children`: O texto que será exibido no quadrado.
+ * - `type`: O tipo do quadrado, que pode ser:
+ *   - `'locked'`: Indica que o desafio está travado.
+ *   - `'unlocked'`: Indica que o desafio está liberado.
+ *   - `'done'`: Indica que o desafio já foi feito.
+ * - `number`: O número do desafio. Se não for fornecido, o valor padrão é 1.
+ *
+ * O estilo do quadrado muda de acordo com o tipo. Se o tipo for `'locked'`, o quadrado
+ * será cinza. Se o tipo for `'unlocked'`, o quadrado será roxo. Se o tipo for `'done'`,
+ * o quadrado será verde.
+ *
+ * @param {React.ReactNode} children - O texto que será exibido no quadrado.
+ * @param {string} type - O tipo do quadrado.
+ * @param {number} number - O número do desafio.
+ * @returns {React.ReactElement} O elemento JSX do quadrado de desafio.
+ */
 const ChallengeSquare = ({ children, type = 'locked', number = 1 }) => {
 	return (
 		<div className=''>

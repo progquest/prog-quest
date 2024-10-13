@@ -3,6 +3,15 @@
 import { ChallengeSquare } from '@/components/misc';
 import { HourGlass } from '@/components/svgs';
 
+/**
+ * Página de desafios
+ *
+ * Esta página é um grid de quadrados que representam os desafios do usuário.
+ * Cada quadrado tem um número que representa a ordem do desafio e um ícone de ampulheta
+ * que representa o tempo de resolução do desafio.
+ *
+ * @returns {JSX.Element} Elemento JSX da página de desafios
+ */
 const ChallengePage = () => {
 	return (
 		<div
