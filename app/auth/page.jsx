@@ -32,7 +32,7 @@ const Auth = () => {
 	return (
 		<div
 			className='relative flex w-screen h-screen max-h-screen max-w-screen
-				text-text-900 bg-background-100 overflow-clip'>
+				text-text-900 bg-white overflow-clip'>
 			<TosVisibleContext.Provider value={{ tosVisible, setTosVisible }}>
 				<div className='flex flex-col overflow-auto w-full h-full px-8 py-2'>
 					<nav className='flex flex-row w-full md:justify-between justify-center items-center'>
@@ -65,7 +65,7 @@ const Auth = () => {
 						<div
 							className='flex flex-col w-[90%] md:w-[60%] lg:w-[35%]
 						place-content-center border border-background-200 rounded-xl
-						bg-pink-100 p-5'>
+						bg-background-100 p-5'>
 							{/* Form de Registro/Login */}
 							{isRegister ? <RegisterForm /> : <LoginForm />}
 

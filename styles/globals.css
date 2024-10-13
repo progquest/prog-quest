@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 :root {
-	--text-900: rgb(17, 24, 39);
-	--background-200: rgb(145, 145, 145);
-	--background-100: rgb(225, 225, 225);
+	--text-900: #111827;
+	--background-200: #919191;
+	--background-100: #e1e1e1;
 
 	--purple-100: #a47fff;
 	--purple-200: #8b52fe;

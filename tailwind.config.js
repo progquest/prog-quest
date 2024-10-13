@@ -13,11 +13,11 @@ module.exports = {
 			},
 			colors: {
 				text: {
-					900: 'var(--text-900)',
+					900: '#111827',
 				},
 				background: {
-					100: 'var(--background-100)',
-					200: 'var(--background-200)',
+					100: '#f9f9f9',
+					200: '#e1e1e1',
 				},
 				primary: {
 					100: '#dbc9f3',

@@ -50,7 +50,7 @@ const ResetPasswordForm = () => {
 					/>
 					<div
 						className='flex flex-col w-[90%] md:w-[60%] lg:w-[35%] place-content-center 
-                		border border-background-200 rounded-xl bg-pink-100 p-5'>
+                		border border-background-200 rounded-xl bg-background-100 p-5'>
 						{/* FORMULARIO */}
 						<form
 							className='flex flex-col w-full h-full gap-2 p-2'
@@ -60,10 +60,10 @@ const ResetPasswordForm = () => {
 							</h1>
 
 							{/* Nova Senha */}
-							<div className='relative flex flex-row m-2 text-background-200'>
+							<div className='relative flex flex-row m-2 text-gray-400'>
 								<input
-									className='w-full h-full bg-background-100 rounded-full
-                            		px-4 py-2 gap-2'
+									className='w-full h-full bg-gray-200 rounded-full
+                            		px-4 py-2 gap-2 placeholder:text-gray-400'
 									type='password'
 									placeholder='Nova Senha'
 									required
@@ -75,10 +75,10 @@ const ResetPasswordForm = () => {
 							</div>
 
 							{/* Confirmar Nova Senha */}
-							<div className='relative flex flex-row m-2 text-background-200'>
+							<div className='relative flex flex-row m-2 text-gray-400'>
 								<input
-									className='w-full h-full bg-background-100 rounded-full
-                            		px-4 py-2 gap-2'
+									className='w-full h-full bg-gray-200 rounded-full
+                            		px-4 py-2 gap-2 placeholder:text-gray-400'
 									type='password'
 									placeholder='Confirmar Nova Senha'
 									required

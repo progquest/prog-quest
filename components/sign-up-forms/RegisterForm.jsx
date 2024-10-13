@@ -20,10 +20,10 @@ const RegisterForm = () => {
 			{/* Register Form */}
 			<h1 className='text-center font-bold text-3xl'>Registrar</h1>
 			{/* Usuário */}
-			<div className='relative flex flex-row m-2 text-background-200'>
+			<div className='relative flex flex-row m-2 text-gray-400'>
 				<input
-					className='w-full h-full bg-background-100 rounded-full
-					px-4 py-2 gap-2'
+					className='w-full h-full bg-gray-200 rounded-full
+					px-4 py-2 gap-2 placeholder:text-gray-400'
 					type='text'
 					placeholder='Usuário'
 					name='username'
@@ -35,10 +35,10 @@ const RegisterForm = () => {
 				/>
 			</div>
 			{/* Email */}
-			<div className='relative flex flex-row m-2 text-background-200'>
+			<div className='relative flex flex-row m-2 text-gray-400'>
 				<input
-					className='w-full h-full bg-background-100 rounded-full
-					px-4 py-2 gap-2'
+					className='w-full h-full bg-gray-200 rounded-full
+					px-4 py-2 gap-2 placeholder:text-gray-400'
 					type='email'
 					placeholder='Email'
 					name='email'
@@ -50,10 +50,10 @@ const RegisterForm = () => {
 				/>
 			</div>
 			{/* Senha */}
-			<div className='relative flex flex-row m-2 text-background-200'>
+			<div className='relative flex flex-row m-2 text-gray-400'>
 				<input
-					className='w-full h-full bg-background-100 rounded-full
-					t	px-4 py-2 gap-2'
+					className='w-full h-full bg-gray-200 rounded-full
+					t	px-4 py-2 gap-2 placeholder:text-gray-400'
 					type='password'
 					placeholder='Senha'
 					name='password'
