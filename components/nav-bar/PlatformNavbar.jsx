@@ -10,8 +10,12 @@ import {
 	Logout,
 } from '@/components/svgs';
 import { BorderButton } from '@/components/buttons';
+import { CurrentMainPage } from '@/app/app/page';
+import { useContext } from 'react';
 
-const PlatformNavbar = ({ current = 'exercise' }) => {
+const PlatformNavbar = () => {
+	const [page, setPage] = useContext(CurrentMainPage);
+
 	return (
 		<aside className='h-full w-full bg-white border-gray-400 border-t md:border-r'>
 			<nav
@@ -33,54 +37,54 @@ const PlatformNavbar = ({ current = 'exercise' }) => {
 					<hr className='hidden md:block bg-white rounded-sm w-full h-px' />
 
 					{/* NAVEGAÇÃO */}
-					<Link
-						href='#'
+					<button
+						onClick={() => setPage('exercise')}
 						className='md:w-full group text-black font-semibold
 						rounded-full text-sm focus:outline-none
 						hover:text-primary-400 focus:text-primary-400'>
 						<BorderButton
-							selected={current === 'exercise'}
+							selected={page === 'exercise'}
 							className='py-3 md:py-2 px-3 gap-2'>
 							<Exercise size={24} />
 							<p className='hidden md:block'>Exercícios</p>
 						</BorderButton>
-					</Link>
-					<Link
-						href='#'
+					</button>
+					<button
+						onClick={() => setPage('level')}
 						className='md:w-full group text-black font-semibold
 						rounded-full text-sm focus:outline-none
 						hover:text-primary-400 focus:text-primary-400'>
 						<BorderButton
-							selected={current === 'level'}
+							selected={page === 'level'}
 							className='py-3 md:py-2 px-3 gap-2'>
 							<Level size={24} />
 							<p className='hidden md:block'>Nível</p>
 						</BorderButton>
-					</Link>
-					<Link
-						href='/challenges'
+					</button>
+					<button
+						onClick={() => setPage('challenge')}
 						className='md:w-full group text-black font-semibold
 						rounded-full text-sm focus:outline-none
 						hover:text-primary-400 focus:text-primary-400'>
 						<BorderButton
-							selected={current === 'challenge'}
+							selected={page === 'challenge'}
 							className='py-3 md:py-2 px-3 gap-2'>
 							<Challenges size={24} />
 							<p className='hidden md:block'>Desafios</p>
 						</BorderButton>
-					</Link>
-					<Link
-						href='/profile'
+					</button>
+					<button
+						onClick={() => setPage('profile')}
 						className='md:w-full group text-black font-semibold
 						rounded-full text-sm focus:outline-none
 						hover:text-primary-400 focus:text-primary-400'>
 						<BorderButton
-							selected={current === 'profile'}
+							selected={page === 'profile'}
 							className='py-3 md:py-2 px-3 gap-2'>
 							<AccountCircle size={24} />
 							<p className='hidden md:block'>Perfil</p>
 						</BorderButton>
-					</Link>
+					</button>
 				</div>
 				{/* SAIR */}
 				<div className='md:w-full'>

@@ -51,6 +51,7 @@ const ProfileInfo = () => {
 						src={fakeUser?.img}
 						alt='Foto de Perfil'
 						fill
+						sizes='100%'
 						className='object-cover'
 					/>
 				</div>
