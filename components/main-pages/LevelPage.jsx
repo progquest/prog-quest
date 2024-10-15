@@ -68,9 +68,7 @@ const LevelPage = () => {
 	const [level, setLevel] = useState(0);
 
 	return (
-		<div
-			className='flex flex-col h-full md:w-4/5 overflow-auto 
-			items-center justify-center px-8 py-16 lg:px-16 flex-grow'>
+		<div className='flex flex-col h-full items-center justify-center px-8 py-16 lg:px-16'>
 			<div className='flex flex-col gap-6 w-full aspect-[12/5] min-h-80'>
 				<div className='flex flex-row gap-6 h-1/2'>
 					<div
