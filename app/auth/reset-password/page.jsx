@@ -7,7 +7,7 @@ const ResetPassword = () => {
 	return (
 		<div
 			className='relative flex w-screen h-screen max-h-screen max-w-screen
-            text-text-900 bg-white overflow-clip'>
+            text-text-900 bg-gray-100 overflow-clip'>
 			<div className='flex flex-col overflow-auto w-full h-full px-8 py-2'>
 				<nav className='flex flex-row w-full md:justify-between justify-center items-center'>
 					{/* Logo Icon */}

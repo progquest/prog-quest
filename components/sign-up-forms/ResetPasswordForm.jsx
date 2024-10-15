@@ -36,13 +36,15 @@ const ResetPasswordForm = () => {
 	return (
 		<>
 			{success ? (
-				<div className='flex flex-col w-full h-full justify-center items-center gap-0'>
-					<Image
-						src='/assets/icons/login-page-icon/success-password.svg'
-						width={380}
-						height={402}
-						alt='Camaleao com roupas do personagem ash de pokemon celebrando'
-					/>
+				<div className='flex flex-col w-full h-full justify-center items-center'>
+					<div className='relative w-full aspect-square max-w-80'>
+						<Image
+							src='/assets/mascote/ash-1.png'
+							fill
+							sizes='100%'
+							alt='Camaleao com roupas do personagem ash de pokemon celebrando'
+						/>
+					</div>
 					<h2 className='text-3xl font-bold text-center text-primary-400'>
 						Pronto
 					</h2>
