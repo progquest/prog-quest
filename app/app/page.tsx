@@ -21,14 +21,14 @@ const MainPage = () => {
 	const [page, setPage] = useState('exercise');
 
 	return (
-		<div className='flex flex-col-reverse md:flex-row relative w-full h-screen'>
-			<div className='fixed bottom-0 w-full h-20 md:top-0 md:h-screen md:w-48 z-10'>
+		<div className='flex relative flex-col-reverse w-full h-screen md:flex-row'>
+			<div className='fixed bottom-0 z-10 w-full h-20 md:top-0 md:h-screen md:w-48'>
 				{/* NAVBAR */}
 				<CurrentMainPage.Provider value={[page, setPage]}>
 					<PlatformNavbar />
 				</CurrentMainPage.Provider>
 			</div>
-			<div className='h-full w-full md:pl-48 bg-gray-50'>
+			<div className='w-full h-full bg-gray-50 md:pl-48'>
 				{page === 'profile' ? (
 					<ProfilePage />
 				) : page === 'challenge' ? (

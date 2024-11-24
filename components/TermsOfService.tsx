@@ -3,6 +3,7 @@
 import { useContext } from 'react';
 import { TosVisibleContext } from '@/app/auth/page';
 import { MdClose } from 'react-icons/md';
+import { cn } from '@/lib/utils';
 
 /**
  * Um painel com os termos de serviço da plataforma
@@ -13,24 +14,21 @@ const TermsOfService = () => {
 
 	return (
 		<div
-			className={`absolute top-0 z-30 w-screen h-screen flex items-center 
-				justify-center transition-all bg-black bg-opacity-20 p-20
-				max-h-screen left-0 ${!tosVisible && 'hidden'}`}>
-			<div
-				className='relative max-w-4xl bg-pink-100 p-12 md:px-36 md:py-15
-            	m-auto rounded-md animate-fade-in-up flex max-h-[90vh]
-				flex-col justify-center items-center'>
+			className={cn(
+				'absolute top-0 z-30 w-screen h-screen flex items-center justify-center transition-all bg-black bg-opacity-20 p-20 max-h-screen left-0',
+				!tosVisible && 'hidden'
+			)}>
+			<div className='relative max-w-4xl bg-pink-100 p-12 md:px-36 md:py-15 m-auto rounded-md animate-fade-in-up flex max-h-[90vh] flex-col justify-center items-center'>
 				<button
 					autoFocus={tosVisible}
 					onClick={() => setTosVisible(false)}
-					className='absolute right-4 top-4'>
+					className='absolute top-4 right-4'>
 					<MdClose
 						size={45}
-						className='hover:scale-105 transition-all focus:scale-105
-						active:scale-[0.9]'
+						className='hover:scale-105 transition-all focus:scale-105 active:scale-[0.9]'
 					/>
 				</button>
-				<h1 classname='text-md lg:text-lg'>
+				<h1 className='text-md lg:text-lg'>
 					Termos e Condições de Uso - ProgQuest
 				</h1>
 				<div className='overflow-scroll w-full h-full'>

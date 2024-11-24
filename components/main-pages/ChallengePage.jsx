@@ -1,6 +1,6 @@
 'use client';
 
-import { ChallengeSquare } from '@/components/misc';
+import { default as ChallengeSquare } from '@/components/misc/ChallengeSquare';
 import { HourGlass } from '@/components/svgs';
 
 /**
@@ -14,10 +14,8 @@ import { HourGlass } from '@/components/svgs';
  */
 const ChallengePage = () => {
 	return (
-		<div className='flex flex-col items-center px-8 py-16 lg:px-16 flex-grow'>
-			<div
-				className='w-full grid grid-cols-2 sm:grid-cols-3 
-					gap-x-8 gap-y-4 md:gap-8 lg:gap-12 max-w-screen-md'>
+		<div className='flex flex-col flex-grow items-center px-8 py-16 lg:px-16'>
+			<div className='grid grid-cols-2 gap-y-4 gap-x-8 w-full max-w-screen-md sm:grid-cols-3 md:gap-8 lg:gap-12'>
 				<ChallengeSquare
 					type='done'
 					number={1}>
