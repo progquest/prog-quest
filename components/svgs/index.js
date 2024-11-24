@@ -1,9 +1,0 @@
-export { default as AccountCircle } from './AccountCircle';
-export { default as Exercise } from './Exercise';
-export { default as Logo } from './Logo';
-export { default as Challenges } from './Challenges';
-export { default as Level } from './Level';
-export { default as Logout } from './Logout';
-export { default as EditIcon } from './EditIcon';
-export { default as ChallengeCup } from './ChallengeCup';
-export { default as HourGlass } from './HourGlass';
