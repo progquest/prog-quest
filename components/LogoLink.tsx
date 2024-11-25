@@ -11,13 +11,13 @@ export const LogoLink = ({
 	return (
 		<Link
 			className={cn(
-				'flex flex-row gap-2 justify-center items-center text-3xl font-extrabold',
+				'flex flex-row gap-1 justify-center items-center text-2xl font-extrabold',
 				className
 			)}
 			href={href}
 			{...props}>
-			<LogoIcon size='5rem' />
-			ProgQuest
+			<LogoIcon size='4rem' />
+			<span className='hidden md:block'>ProgQuest</span>
 		</Link>
 	);
 };

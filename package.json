@@ -10,7 +10,10 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-alert-dialog": "^1.1.2",
+		"@radix-ui/react-avatar": "^1.1.1",
 		"@radix-ui/react-slot": "^1.1.0",
+		"@supabase/ssr": "^0.5.2",
+		"@supabase/supabase-js": "^2.46.1",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
@@ -22,7 +25,8 @@
 		"shadcn": "^2.1.6",
 		"tailwind-merge": "^2.5.4",
 		"tailwindcss-animate": "^1.0.7",
-		"typescript": "^5.7.2"
+		"typescript": "^5.7.2",
+		"zustand": "^5.0.1"
 	},
 	"devDependencies": {
 		"@types/node": "22.9.3",
@@ -30,6 +34,7 @@
 		"eslint": "^9.15.0",
 		"eslint-config-next": "15.0.3",
 		"postcss": "^8",
+		"supabase": "^1.223.10",
 		"tailwindcss": "^3.4.1"
 	}
 }

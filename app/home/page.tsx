@@ -1,18 +1,31 @@
 import { DevsCarousel } from '@/components/DevsCarousel';
+import { LogoLink } from '@/components/LogoLink';
 import { Button } from '@/components/ui/button';
+import { UserAvatar } from '@/components/UserAvatar';
+import InitUser from '@/lib/store/InitUser';
+import { createClientServer } from '@/lib/supabase/server';
+
 import Link from 'next/link';
 
-const LandingPage = () => {
+const LandingPage = async () => {
+	const supabase = await createClientServer();
+
+	const { data } = await supabase.auth.getUser();
+
 	return (
 		<div className=''>
+			<InitUser user={data.user} />
 			<div className='sticky top-0 w-full h-20 bg-primary'>
 				<nav
 					id='nav-bar'
-					className='flex flex-row justify-between items-center px-12 mx-auto w-full max-w-screen-xl h-full lg:py-4 text-neutral-50'>
-					<div className=''>LOGO AQUI</div>
-					<div className='md:hidden'>MOBILE BAR</div>
-					<div className='hidden flex-1 max-w-xl md:block'>
-						<ul className='flex flex-row gap-4 justify-between font-semibold'>
+					className='flex flex-row justify-between gap-8 items-center px-3 md:px-8 w-full h-full lg:py-4 text-neutral-50'>
+					<LogoLink
+						href='#'
+						className='text-white'
+					/>
+					<div className='flex-1 max-w-xl flex items-center gap-5 justify-end'>
+						<div className='md:hidden'>MOBILE BAR</div>
+						<ul className='hidden md:flex flex-row flex-1 gap-4 justify-between font-semibold items-center'>
 							<li className=''>
 								<Link href='#header'>Início</Link>
 							</li>
@@ -26,6 +39,7 @@ const LandingPage = () => {
 								<Link href='#devs'>Desenvolvedores</Link>
 							</li>
 						</ul>
+						<UserAvatar />
 					</div>
 				</nav>
 			</div>
@@ -52,7 +66,9 @@ const LandingPage = () => {
 								size='2xl'
 								className='py-8 text-4xl font-semibold'
 								asChild>
-								<Link href='#'>Entre Aqui!</Link>
+								<Link href={data.user ? '/' : '/auth'}>
+									Entre Aqui!
+								</Link>
 							</Button>
 						</div>
 					</div>
@@ -86,7 +102,9 @@ const LandingPage = () => {
 								size='2xl'
 								className='py-8 text-4xl font-semibold'
 								asChild>
-								<Link href='#'>Entre Aqui!</Link>
+								<Link href={data.user ? '/' : '/auth'}>
+									Entre Aqui!
+								</Link>
 							</Button>
 						</div>
 					</div>
