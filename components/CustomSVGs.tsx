@@ -94,11 +94,9 @@ export const EditIcon = ({ size, ...props }: IconBaseProps) => {
 	);
 };
 
-export const Exercise = ({ size, ...props }: IconBaseProps) => {
+export const Exercise = ({ ...props }: IconBaseProps) => {
 	return (
 		<svg
-			width={size}
-			height={size}
 			viewBox='0 0 33 32'
 			xmlns='http://www.w3.org/2000/svg'
 			{...props}>
@@ -226,11 +224,9 @@ export const Logo = ({ size, ...props }: IconBaseProps) => {
 	);
 };
 
-export const Logout = ({ size, ...props }: IconBaseProps) => {
+export const Logout = ({ ...props }: IconBaseProps) => {
 	return (
 		<svg
-			width={size}
-			height={size}
 			viewBox='0 0 32 32'
 			{...props}
 			xmlns='http://www.w3.org/2000/svg'>
@@ -317,12 +313,10 @@ export const Google = ({ size, ...props }: IconBaseProps) => {
 	);
 };
 
-export const LogoIcon = ({ size, ...props }: IconBaseProps) => {
+export const LogoIcon = ({ ...props }: IconBaseProps) => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			width={size}
-			height={size}
 			viewBox='0 0 117 92'
 			fill='none'
 			{...props}>

@@ -58,15 +58,15 @@ const activeLesson = {
 
 const ExercisePage = () => {
 	return (
-		<div className='flex flex-col bg-blue-400 items-center px-8 py-16 lg:px-16 gap-32'>
+		<div className='flex flex-col gap-32 items-center py-16 px-8 bg-blue-400 lg:px-16'>
 			<div
-				className='w-full max-w-screen-lg flex flex-row justify-center items-center
-				bg-primary-400 shadow-button-default h-24 text-2xl
-				py-6 rounded-2xl gap-4 font-bold text-white shadow-primary-500'>
+				className='flex flex-row gap-4 justify-center w-full max-w-screen-lg h-24 font-bold text-white rounded-2xl items-center
+				bg-primary-400 shadow-button-default text-2xl
+				py-6 shadow-primary-500'>
 				Conceitos de POO
 			</div>
 			<div
-				className='flex flex-col items-center w-full h-full mb-20 relative 
+				className='flex relative flex-col items-center mb-20 w-full h-full 
 				max-w-screen-md'>
 				{lessons.map((lesson, index) => {
 					const isCurrent = lesson.id === activeLesson?.id;

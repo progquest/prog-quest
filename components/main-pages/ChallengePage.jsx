@@ -14,7 +14,7 @@ import { HourGlass } from '@/components/svgs';
  */
 const ChallengePage = () => {
 	return (
-		<div className='flex flex-col flex-grow items-center px-8 py-16 lg:px-16'>
+		<div className='flex flex-col flex-grow items-center py-16 px-8 lg:px-16'>
 			<div className='grid grid-cols-2 gap-y-4 gap-x-8 w-full max-w-screen-md sm:grid-cols-3 md:gap-8 lg:gap-12'>
 				<ChallengeFrame
 					type='done'

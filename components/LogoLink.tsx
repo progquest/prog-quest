@@ -16,7 +16,7 @@ export const LogoLink = ({
 			)}
 			href={href}
 			{...props}>
-			<LogoIcon size='4rem' />
+			<LogoIcon className='min-w-12' />
 			<span className='hidden md:block'>ProgQuest</span>
 		</Link>
 	);

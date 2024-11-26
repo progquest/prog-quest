@@ -1,3 +1,4 @@
+import { SideBar } from '@/components/SideBar';
 import InitUser from '@/lib/store/InitUser';
 import { createClientServer } from '@/lib/supabase/server';
 
@@ -7,10 +8,11 @@ const Home = async () => {
 	const { data } = await supabase.auth.getUser();
 
 	return (
-		<>
-			<div className=''>AppHome</div>
+		<div className='flex flex-col-reverse min-h-screen lg:flex-row'>
+			<SideBar page='exercise' />
+			<div className='flex-1'>AppHome</div>
 			<InitUser user={data.user} />
-		</>
+		</div>
 	);
 };
 

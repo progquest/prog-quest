@@ -3,8 +3,9 @@
 import { User } from '@supabase/supabase-js';
 import { useEffect, useRef } from 'react';
 import { useUser } from './user';
+import { createClientBrowser } from '../supabase/client';
 
-const InitUser = ({ user }: { user: User | undefined | null }) => {
+const InitUser = ({ user }: { user: User | null }) => {
 	const initState = useRef(false);
 
 	useEffect(() => {

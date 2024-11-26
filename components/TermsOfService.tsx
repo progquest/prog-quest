@@ -1,6 +1,5 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -133,10 +132,10 @@ const TermsOfService = () => {
 				<AlertDialogContent>
 					<AlertDialogHeader>
 						<AlertDialogTitle>Termos de Uso</AlertDialogTitle>
-						<AlertDialogDescription className='max-h-96'>
-							<TermsText></TermsText>
-						</AlertDialogDescription>
 					</AlertDialogHeader>
+					<div className='max-h-96 text-neutral-500'>
+						<TermsText></TermsText>
+					</div>
 					<AlertDialogFooter>
 						<AlertDialogAction>Okay</AlertDialogAction>
 					</AlertDialogFooter>

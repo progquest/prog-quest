@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import '../globals.css';
+import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
+import { LogOutAlert } from '@/components/LogOutAlert';
 
 export const metadata: Metadata = {
 	title: 'ProgQuest',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
@@ -24,6 +25,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className='antialiased font-poppins scroll-smooth'>
 				{children}
+				<LogOutAlert />
 				<Toaster
 					position='top-center'
 					closeButton

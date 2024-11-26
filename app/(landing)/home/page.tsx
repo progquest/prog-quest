@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { UserAvatar } from '@/components/UserAvatar';
 import InitUser from '@/lib/store/InitUser';
 import { createClientServer } from '@/lib/supabase/server';
-
 import Link from 'next/link';
 
 const LandingPage = async () => {
@@ -18,14 +17,14 @@ const LandingPage = async () => {
 			<div className='sticky top-0 w-full h-20 bg-primary'>
 				<nav
 					id='nav-bar'
-					className='flex flex-row justify-between gap-8 items-center px-3 md:px-8 w-full h-full lg:py-4 text-neutral-50'>
+					className='flex flex-row gap-8 justify-between items-center px-3 w-full h-full md:px-8 lg:py-4 text-neutral-50'>
 					<LogoLink
 						href='#'
 						className='text-white'
 					/>
-					<div className='flex-1 max-w-xl flex items-center gap-5 justify-end'>
+					<div className='flex flex-1 gap-5 justify-end items-center max-w-xl'>
 						<div className='md:hidden'>MOBILE BAR</div>
-						<ul className='hidden md:flex flex-row flex-1 gap-4 justify-between font-semibold items-center'>
+						<ul className='hidden flex-row flex-1 gap-4 justify-between items-center font-semibold md:flex'>
 							<li className=''>
 								<Link href='#header'>Início</Link>
 							</li>
@@ -66,9 +65,7 @@ const LandingPage = async () => {
 								size='2xl'
 								className='py-8 text-4xl font-semibold'
 								asChild>
-								<Link href={data.user ? '/' : '/auth'}>
-									Entre Aqui!
-								</Link>
+								<Link href='/'>Entre Aqui!</Link>
 							</Button>
 						</div>
 					</div>
@@ -102,9 +99,7 @@ const LandingPage = async () => {
 								size='2xl'
 								className='py-8 text-4xl font-semibold'
 								asChild>
-								<Link href={data.user ? '/' : '/auth'}>
-									Entre Aqui!
-								</Link>
+								<Link href='/'>Entre Aqui!</Link>
 							</Button>
 						</div>
 					</div>

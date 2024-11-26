@@ -7,16 +7,16 @@ const Levels = ['iniciante', 'intermediário', 'avançado'];
 const Descriptions = [
 	<div>
 		O seu nível de conhecimento atual é
-		<div className='text-primary-300 font-semibold inline'> Iniciante!</div>{' '}
+		<div className='inline font-semibold text-primary-300'> Iniciante!</div>{' '}
 		Este é apenas o começo da sua jornada. Você pode refazer o teste para
 		subir de nível, enfrentando mais desafios que esperam por você! <br />{' '}
 		<br /> Prepare-se para aprimorar suas habilidades e tornar-se um
 		verdadeiro herói da programação.{' '}
-		<div className='text-primary-300 font-semibold inline'>Plus Ultra!</div>
+		<div className='inline font-semibold text-primary-300'>Plus Ultra!</div>
 	</div>,
 	<div>
 		O seu nível de conhecimento atual é
-		<div className='text-primary-300 font-semibold inline'>
+		<div className='inline font-semibold text-primary-300'>
 			{' '}
 			Intermediário!
 		</div>{' '}
@@ -25,17 +25,17 @@ const Descriptions = [
 		<br /> <br /> Continue desafiando-se e enfrentando os testes com
 		determinação. A estrada da maestria está à sua frente, e você está no
 		caminho certo para se tornar um verdadeiro mestre da programação.{' '}
-		<div className='text-primary-300 font-semibold inline'>Plus Ultra!</div>
+		<div className='inline font-semibold text-primary-300'>Plus Ultra!</div>
 	</div>,
 	<div>
 		O seu nível de conhecimento atingiu o
-		<div className='text-primary-300 font-semibold inline'> Avançado!</div>{' '}
+		<div className='inline font-semibold text-primary-300'> Avançado!</div>{' '}
 		Toda a minha admiração por você, pois você se tornou verdadeiramente
 		excepcional nesta jornada.
 		<br /> <br />
 		Você não está apenas dominando a programação, você está moldando o seu
 		futuro com o seu conhecimento! Continue avançando!
-		<div className='text-primary-300 font-semibold inline'>
+		<div className='inline font-semibold text-primary-300'>
 			{' '}
 			Plus Ultra!
 		</div>
@@ -68,7 +68,7 @@ const LevelPage = () => {
 	const [level, setLevel] = useState(0);
 
 	return (
-		<div className='flex flex-col h-full items-center justify-center px-8 py-16 lg:px-16'>
+		<div className='flex flex-col justify-center items-center py-16 px-8 h-full lg:px-16'>
 			<div className='flex flex-col gap-6 w-full aspect-[12/5] min-h-80'>
 				<div className='flex flex-row gap-6 h-1/2'>
 					<div
@@ -76,26 +76,26 @@ const LevelPage = () => {
 						border-gray-400 rounded-tl-3xl flex flex-col
 						justify-center items-start py-6 px-4 gap-2 lg:px-8'>
 						<div
-							className='flex flex-row justify-center 
-							items-center gap-2 w-full'>
-							<div className='w-3 h-3 bg-primary-300 rounded-full'></div>
-							<div className='w-3 h-3 bg-primary-300 rounded-full'></div>
+							className='flex flex-row gap-2 justify-center w-full 
+							items-center'>
+							<div className='w-3 h-3 rounded-full bg-primary-300'></div>
+							<div className='w-3 h-3 rounded-full bg-primary-300'></div>
 						</div>
 						<div
-							className='bg-gray-400 rounded-lg aspect-square
-							w-full flex justify-center items-center'>
+							className='flex justify-center items-center bg-gray-400 rounded-lg aspect-square
+							w-full'>
 							{Icons[level]}
 						</div>
-						<p className='w-full text-center text-gray-600 text-sm font-semibold'>
+						<p className='w-full text-sm font-semibold text-center text-gray-600'>
 							{Levels[level].toUpperCase()}
 						</p>
 					</div>
 					<div
-						className='bg-gray-200 border-2 border-gray-400 
-						flex-grow rounded-tr-3xl px-3 py-4'>
+						className='py-4 px-3 bg-gray-200 rounded-tr-3xl border-2 border-gray-400 
+						flex-grow'>
 						<div
-							className='overflow-y-scroll w-full h-full
-							snap-y scroll-my-3 text-xs md:text-sm xl:text-lg 
+							className='overflow-y-scroll w-full text-xs h-full
+							snap-y scroll-my-3 md:text-sm xl:text-lg 
 							2xl:text-2xl'>
 							{Descriptions[level]}
 						</div>
