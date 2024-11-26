@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '../globals.css';
+import { Toaster } from '@/components/ui/sonner';
 
 export const metadata: Metadata = {
 	title: 'ProgQuest',
@@ -23,6 +24,10 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className='antialiased font-poppins scroll-smooth'>
 				{children}
+				<Toaster
+					position='top-center'
+					closeButton
+				/>
 			</body>
 		</html>
 	);

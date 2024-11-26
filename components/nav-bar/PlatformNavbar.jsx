@@ -10,7 +10,7 @@ import {
 	Logout,
 } from '@/components/svgs';
 import { BorderButton } from '@/components/buttons';
-import { CurrentMainPage } from '@/app/app/page';
+import { CurrentMainPage } from '@/app/(aplication)/app/page';
 import { useContext } from 'react';
 
 /**

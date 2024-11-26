@@ -46,7 +46,7 @@ const LandingPage = async () => {
 			<header
 				className='w-full'
 				id='header'>
-				<div className='w-full min-h-[calc(100vh-20rem)] rounded-b-[5rem] bg-primary flex flex-col md:flex-row gap-8 md:gap-4 text-neutral-50 pb-5 md:pb-0 justify-center items-center'>
+				<div className='w-full min-h-[calc(100vh-20rem)] rounded-b-[5rem] bg-primary flex flex-col md:flex-row gap-8 md:gap-4 text-neutral-50 justify-center p-5 items-center'>
 					<div className='flex justify-center items-center size-full'>
 						<div className='block size-[20rem] lg:size-[25rem] text-center md:text-left space-y-5 md:space-y-12 content-center'>
 							<div className='space-y-5'>
@@ -79,7 +79,7 @@ const LandingPage = async () => {
 			</header>
 			<section
 				id='about'
-				className='w-full min-h-[calc(100vh-20rem)] block content-center mt-8 md:mt-0'>
+				className='w-full min-h-[calc(100vh-20rem)] block content-center mt-8'>
 				<div className='flex flex-col-reverse gap-8 mx-auto md:gap-4 md:flex-row'>
 					<div className='flex justify-center items-center size-full'>
 						<div className='size-[20rem] lg:size-[25rem] bg-neutral-300 rounded-[4rem]'></div>
@@ -112,7 +112,7 @@ const LandingPage = async () => {
 			</section>
 			<section
 				id='knowlage'
-				className='w-full min-h-[calc(100vh-20rem)] block content-center mt-8 md:mt-0 space-y-6'>
+				className='w-full min-h-[calc(100vh-20rem)] block content-center mt-8 space-y-6'>
 				<div className='block content-center space-y-5'>
 					<h1 className='mx-auto max-w-lg text-4xl font-bold text-center'>
 						Níveis de Conhecimento

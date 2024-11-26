@@ -37,21 +37,21 @@ export const AuthPage = () => {
 				className='absolute top-5 w-full lg:left-5 lg:w-min text-primary'
 			/>
 			<div className='block content-center items-center size-full'>
-				<div className='relative p-10 mx-auto max-w-min rounded-lg ring-1 bg-neutral-200 ring-neutral-500'>
-					<HideChameleon className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[150px]' />
-					<div className='space-y-8'>
-						<h1 className='text-3xl font-bold text-center'>
+				<div className='relative p-10 mx-auto max-w-min rounded-lg ring-1 bg-neutral-200 ring-neutral-500 mt-8'>
+					<HideChameleon className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[90%]' />
+					<div className='space-y-5'>
+						<h1 className='text-xl font-bold text-center'>
 							Fazer Login
 						</h1>
 						<Button
-							size='2xl'
+							size='xl'
 							variant='depth'
 							onClick={handleLoginWithGitHub}>
 							<Github fill='currentColor' />
 							Entrar com GitHub
 						</Button>
 						<Button
-							size='2xl'
+							size='xl'
 							variant='depth'
 							disabled>
 							<Google fill='currentColor' />

@@ -2,11 +2,9 @@
 
 import { IconBaseProps } from 'react-icons/lib';
 
-export const AccountCircle = ({ size = 33, ...props }: IconBaseProps) => {
+export const AccountCircle = ({ ...props }: IconBaseProps) => {
 	return (
 		<svg
-			width={size}
-			height={size}
 			viewBox='0 0 33 33'
 			xmlns='http://www.w3.org/2000/svg'
 			{...props}>
@@ -15,11 +13,9 @@ export const AccountCircle = ({ size = 33, ...props }: IconBaseProps) => {
 	);
 };
 
-export const ChallengeCup = ({ size = 204, ...props }: IconBaseProps) => {
+export const ChallengeCup = ({ ...props }: IconBaseProps) => {
 	return (
 		<svg
-			width={size}
-			height={size}
 			viewBox='0 0 204 204'
 			xmlns='http://www.w3.org/2000/svg'>
 			<g filter='url(#shadowFilter)'>
@@ -72,7 +68,7 @@ export const ChallengeCup = ({ size = 204, ...props }: IconBaseProps) => {
 	);
 };
 
-export const Challenges = ({ size = 33, ...props }: IconBaseProps) => {
+export const Challenges = ({ size, ...props }: IconBaseProps) => {
 	return (
 		<svg
 			width={size}
@@ -85,7 +81,7 @@ export const Challenges = ({ size = 33, ...props }: IconBaseProps) => {
 	);
 };
 
-export const EditIcon = ({ size = 30, ...props }: IconBaseProps) => {
+export const EditIcon = ({ size, ...props }: IconBaseProps) => {
 	return (
 		<svg
 			width={size}
@@ -98,7 +94,7 @@ export const EditIcon = ({ size = 30, ...props }: IconBaseProps) => {
 	);
 };
 
-export const Exercise = ({ size = 33, ...props }: IconBaseProps) => {
+export const Exercise = ({ size, ...props }: IconBaseProps) => {
 	return (
 		<svg
 			width={size}
@@ -111,7 +107,7 @@ export const Exercise = ({ size = 33, ...props }: IconBaseProps) => {
 	);
 };
 
-export const HourGlass = ({ size = 42, ...props }: IconBaseProps) => {
+export const HourGlass = ({ size, ...props }: IconBaseProps) => {
 	return (
 		<svg
 			width={size}
@@ -124,7 +120,7 @@ export const HourGlass = ({ size = 42, ...props }: IconBaseProps) => {
 	);
 };
 
-export const Level = ({ size = 32, ...props }: IconBaseProps) => {
+export const Level = ({ size, ...props }: IconBaseProps) => {
 	return (
 		<svg
 			width={size}
@@ -137,7 +133,7 @@ export const Level = ({ size = 32, ...props }: IconBaseProps) => {
 	);
 };
 
-export const Logo = ({ size = 117, ...props }: IconBaseProps) => {
+export const Logo = ({ size, ...props }: IconBaseProps) => {
 	return (
 		<svg
 			width={size}
@@ -230,7 +226,7 @@ export const Logo = ({ size = 117, ...props }: IconBaseProps) => {
 	);
 };
 
-export const Logout = ({ size = 32, ...props }: IconBaseProps) => {
+export const Logout = ({ size, ...props }: IconBaseProps) => {
 	return (
 		<svg
 			width={size}
@@ -243,11 +239,10 @@ export const Logout = ({ size = 32, ...props }: IconBaseProps) => {
 	);
 };
 
-export const HideChameleon = ({ size = 285, ...props }: IconBaseProps) => (
+export const HideChameleon = ({ ...props }: IconBaseProps) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
-		width={size}
-		height={size}
+		viewBox='0 0 285 170'
 		{...props}>
 		<path
 			fill='#36AD68'
