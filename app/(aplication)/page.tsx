@@ -9,7 +9,7 @@ const Home = async () => {
 
 	return (
 		<div className='flex flex-col-reverse min-h-screen lg:flex-row'>
-			<SideBar page='exercise' />
+			<SideBar />
 			<div className='flex-1'>AppHome</div>
 			<InitUser user={data.user} />
 		</div>

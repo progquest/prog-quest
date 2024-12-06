@@ -44,7 +44,7 @@ export const updateSession = async (request: NextRequest) => {
 	) {
 		// no user, potentially respond by redirecting the user to the login page
 		const url = request.nextUrl.clone();
-		url.pathname = '/auth';
+		url.pathname = '/home';
 		return NextResponse.redirect(url);
 	}
 

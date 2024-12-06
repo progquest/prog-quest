@@ -5,9 +5,9 @@ import { Button } from './ui/button';
 import { AccountCircle, Exercise, Logout } from './CustomSVGs';
 import { LogoLink } from './LogoLink';
 
-export const SideBar = ({ page }: { page: 'exercise' | 'profile' }) => {
+export const SideBar = () => {
 	return (
-		<div className='flex sticky bottom-0 left-0 flex-row gap-4 justify-center p-4 w-full h-20 lg:top-0 lg:h-screen lg:flex-col lg:max-w-60 lg:justify-between'>
+		<div className='flex sticky bottom-0 left-0 flex-row gap-4 justify-center p-4 w-full h-20 lg:top-0 lg:h-screen lg:flex-col lg:max-w-60 lg:justify-between bg-neutral-50 z-10'>
 			<div className='flex flex-row gap-4 lg:flex-col'>
 				<LogoLink
 					href='/home'

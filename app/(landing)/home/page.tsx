@@ -63,9 +63,11 @@ const LandingPage = async () => {
 							<Button
 								variant='secondary'
 								size='2xl'
-								className='py-8 text-4xl font-semibold'
+								className='py-8 text-4xl font-semibold rounded-full'
 								asChild>
-								<Link href='/'>Entre Aqui!</Link>
+								<Link href={data.user ? '/' : '/auth'}>
+									Entre Aqui!
+								</Link>
 							</Button>
 						</div>
 					</div>
@@ -97,9 +99,11 @@ const LandingPage = async () => {
 							</div>
 							<Button
 								size='2xl'
-								className='py-8 text-4xl font-semibold'
+								className='py-8 text-4xl font-semibold rounded-full'
 								asChild>
-								<Link href='/'>Entre Aqui!</Link>
+								<Link href={data.user ? '/' : '/auth'}>
+									Entre Aqui!
+								</Link>
 							</Button>
 						</div>
 					</div>

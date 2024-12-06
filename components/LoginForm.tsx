@@ -25,14 +25,14 @@ export const LoginForm = () => {
 			<h1 className='text-xl font-bold text-center'>Fazer Login</h1>
 			<Button
 				size='xl'
-				variant='depth'
+				variant='defaultDepth'
 				onClick={handleLoginWithGitHub}>
 				<Github fill='currentColor' />
 				Entrar com GitHub
 			</Button>
 			<Button
 				size='xl'
-				variant='depth'
+				variant='defaultDepth'
 				disabled>
 				<Google fill='currentColor' />
 				Entrar com Google
