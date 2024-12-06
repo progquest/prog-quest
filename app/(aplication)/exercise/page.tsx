@@ -4,19 +4,16 @@ import InitUser from '@/lib/store/InitUser';
 import { createClientServer } from '@/lib/supabase/server';
 import { Check, Star } from 'lucide-react';
 
-// dados de exercício debug
-import { exercises } from '@/components/misc/exercise-data.json';
+// dados de exercício debug, esses virão do banco de dados
+import {
+	exercises,
+	currentExerciseId,
+} from '@/components/misc/exercise-data.json';
 
 const ExercisePage = async () => {
 	const supabase = await createClientServer();
 
 	const { data } = await supabase.auth.getUser();
-
-	/*
-	 * isso futuramente poderá ser pegue dos dados do usuário
-	 * está aqui por enquanto por motivos de teste.
-	 */
-	const currentExerciseId = 2;
 
 	return (
 		<div className='flex flex-col-reverse min-h-screen lg:flex-row'>
@@ -49,7 +46,10 @@ const ExercisePage = async () => {
 
 						// caso o exercício não esteja completado e não é
 						// o exercicio atual será colocado como 'trancado'
-						const isLocked = !completed && id !== currentExerciseId;
+						const isLocked =
+							!completed &&
+							id !== currentExerciseId &&
+							id > currentExerciseId;
 
 						// utilizando um 'checkmark' quando completado
 						// e uma estrela quando não
